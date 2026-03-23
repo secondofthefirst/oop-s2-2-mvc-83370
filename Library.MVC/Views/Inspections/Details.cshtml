@@ -1,0 +1,148 @@
+@model Library.Domain.Inspection
+
+@{
+    ViewData["Title"] = "Inspection Details";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-10">
+            <h1>Inspection Report</h1>
+            <hr />
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Premises?.Name</h5>
+                    <p class="card-text text-muted">@Model.Premises?.Address, @Model.Premises?.Town</p>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h6 class="card-title">Inspection Date</h6>
+                            <p class="card-text">@Model.InspectionDate.ToString("dd/MM/yyyy")</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h6 class="card-title">Score</h6>
+                            <p class="card-text"><strong>@Model.Score</strong> / 100</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h6 class="card-title">Outcome</h6>
+                            <p class="card-text">
+                                @if (Model.Outcome == "Pass")
+                                {
+                                    <span class="badge bg-success">Pass</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">Fail</span>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h6 class="card-title">Follow-ups</h6>
+                            <p class="card-text"><span class="badge bg-info">@Model.FollowUps.Count</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @if (!string.IsNullOrEmpty(Model.Notes))
+            {
+                <div class="card mb-4">
+                    <div class="card-header">Notes</div>
+                    <div class="card-body">
+                        <p>@Model.Notes</p>
+                    </div>
+                </div>
+            }
+
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Follow-ups</span>
+                    @if (User.IsInRole("Admin") || User.IsInRole("Inspector"))
+                    {
+                        <a asp-controller="FollowUps" asp-action="Create" asp-route-inspectionId="@Model.Id" class="btn btn-sm btn-success">+ Add Follow-up</a>
+                    }
+                </div>
+                <div class="card-body">
+                    @if (Model.FollowUps.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-sm table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Due Date</th>
+                                        <th>Status</th>
+                                        <th>Closed</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var followUp in Model.FollowUps.OrderBy(f => f.DueDate))
+                                    {
+                                        <tr>
+                                            <td>@followUp.DueDate.ToString("dd/MM/yyyy")</td>
+                                            <td>
+                                                @if (followUp.Status == "Open" && followUp.DueDate < DateTime.Now.Date)
+                                                {
+                                                    <span class="badge bg-danger">Overdue</span>
+                                                }
+                                                else if (followUp.Status == "Open")
+                                                {
+                                                    <span class="badge bg-warning text-dark">Open</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-success">Closed</span>
+                                                }
+                                            </td>
+                                            <td>@followUp.ClosedDate?.ToString("dd/MM/yyyy")</td>
+                                            <td>
+                                                <a asp-controller="FollowUps" asp-action="Details" asp-route-id="@followUp.Id" class="btn btn-sm btn-info">View</a>
+                                                @if (User.IsInRole("Admin") || User.IsInRole("Inspector"))
+                                                {
+                                                    <a asp-controller="FollowUps" asp-action="Edit" asp-route-id="@followUp.Id" class="btn btn-sm btn-warning">Edit</a>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted">No follow-ups yet.</p>
+                    }
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <a asp-action="Index" class="btn btn-secondary">Back to Inspections</a>
+                @if (User.IsInRole("Admin") || User.IsInRole("Inspector"))
+                {
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+                }
+                @if (User.IsInRole("Admin"))
+                {
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

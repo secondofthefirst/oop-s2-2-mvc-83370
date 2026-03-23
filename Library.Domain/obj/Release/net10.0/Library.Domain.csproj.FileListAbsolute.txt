@@ -1,0 +1,13 @@
+C:\Users\livet\Downloads\AAAAAA\oop-s2-2-mvc-83370\Library.Domain\bin\Release\net10.0\Library.Domain.deps.json
+C:\Users\livet\Downloads\AAAAAA\oop-s2-2-mvc-83370\Library.Domain\bin\Release\net10.0\Library.Domain.dll
+C:\Users\livet\Downloads\AAAAAA\oop-s2-2-mvc-83370\Library.Domain\bin\Release\net10.0\Library.Domain.pdb
+C:\Users\livet\Downloads\AAAAAA\oop-s2-2-mvc-83370\Library.Domain\obj\Release\net10.0\Library.Domain.csproj.AssemblyReference.cache
+C:\Users\livet\Downloads\AAAAAA\oop-s2-2-mvc-83370\Library.Domain\obj\Release\net10.0\Library.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\livet\Downloads\AAAAAA\oop-s2-2-mvc-83370\Library.Domain\obj\Release\net10.0\Library.Domain.AssemblyInfoInputs.cache
+C:\Users\livet\Downloads\AAAAAA\oop-s2-2-mvc-83370\Library.Domain\obj\Release\net10.0\Library.Domain.AssemblyInfo.cs
+C:\Users\livet\Downloads\AAAAAA\oop-s2-2-mvc-83370\Library.Domain\obj\Release\net10.0\Library.Domain.csproj.CoreCompileInputs.cache
+C:\Users\livet\Downloads\AAAAAA\oop-s2-2-mvc-83370\Library.Domain\obj\Release\net10.0\Library.Domain.sourcelink.json
+C:\Users\livet\Downloads\AAAAAA\oop-s2-2-mvc-83370\Library.Domain\obj\Release\net10.0\Library.Domain.dll
+C:\Users\livet\Downloads\AAAAAA\oop-s2-2-mvc-83370\Library.Domain\obj\Release\net10.0\refint\Library.Domain.dll
+C:\Users\livet\Downloads\AAAAAA\oop-s2-2-mvc-83370\Library.Domain\obj\Release\net10.0\Library.Domain.pdb
+C:\Users\livet\Downloads\AAAAAA\oop-s2-2-mvc-83370\Library.Domain\obj\Release\net10.0\ref\Library.Domain.dll

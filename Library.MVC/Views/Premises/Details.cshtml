@@ -1,0 +1,87 @@
+@model Library.Domain.Premises
+
+@{
+    ViewData["Title"] = "Premises Details";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>@Model.Name</h1>
+            <hr />
+            
+            <dl class="row">
+                <dt class="col-sm-3">Address</dt>
+                <dd class="col-sm-9">@Model.Address</dd>
+
+                <dt class="col-sm-3">Town</dt>
+                <dd class="col-sm-9">@Model.Town</dd>
+
+                <dt class="col-sm-3">Risk Rating</dt>
+                <dd class="col-sm-9">
+                    @{
+                        var badgeClass = Model.RiskRating switch
+                        {
+                            "Low" => "success",
+                            "Medium" => "warning",
+                            "High" => "danger",
+                            _ => "secondary"
+                        };
+                    }
+                    <span class="badge bg-@badgeClass">@Model.RiskRating</span>
+                </dd>
+            </dl>
+
+            <h3 class="mt-4">Inspections</h3>
+            @if (Model.Inspections.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-sm table-striped">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Score</th>
+                                <th>Outcome</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var inspection in Model.Inspections.OrderByDescending(i => i.InspectionDate))
+                            {
+                                <tr>
+                                    <td>@inspection.InspectionDate.ToString("dd/MM/yyyy")</td>
+                                    <td>@inspection.Score/100</td>
+                                    <td>
+                                        @if (inspection.Outcome == "Pass")
+                                        {
+                                            <span class="badge bg-success">Pass</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-danger">Fail</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <a asp-controller="Inspections" asp-action="Details" asp-route-id="@inspection.Id" class="btn btn-sm btn-info">View</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">No inspections recorded yet.</div>
+            }
+
+            <div class="mt-4">
+                <a asp-action="Index" class="btn btn-secondary">Back</a>
+                @if (User.IsInRole("Admin"))
+                {
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

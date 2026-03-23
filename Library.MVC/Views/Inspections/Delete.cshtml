@@ -1,0 +1,41 @@
+@model Library.Domain.Inspection
+
+@{
+    ViewData["Title"] = "Delete Inspection";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <h3 class="text-danger">Delete Inspection</h3>
+            <hr />
+            
+            <div class="alert alert-warning">
+                <strong>Warning:</strong> Deleting this inspection will also delete all associated follow-ups. This action cannot be undone.
+            </div>
+
+            <dl class="row">
+                <dt class="col-sm-3">Premises</dt>
+                <dd class="col-sm-9">@Model.Premises?.Name (@Model.Premises?.Town)</dd>
+
+                <dt class="col-sm-3">Date</dt>
+                <dd class="col-sm-9">@Model.InspectionDate.ToString("dd/MM/yyyy")</dd>
+
+                <dt class="col-sm-3">Score</dt>
+                <dd class="col-sm-9">@Model.Score / 100</dd>
+
+                <dt class="col-sm-3">Outcome</dt>
+                <dd class="col-sm-9">@Model.Outcome</dd>
+
+                <dt class="col-sm-3">Follow-ups</dt>
+                <dd class="col-sm-9">@Model.FollowUps.Count</dd>
+            </dl>
+
+            <form asp-action="Delete" method="post">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

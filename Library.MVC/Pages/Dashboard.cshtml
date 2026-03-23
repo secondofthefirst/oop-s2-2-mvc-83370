@@ -1,0 +1,148 @@
+@page
+@using Library.MVC.Pages
+@model DashboardModel
+@{
+    ViewData["Title"] = "Food Safety Inspection Dashboard";
+}
+
+<div class="container-fluid mt-5">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-4">Food Safety Inspection Dashboard</h1>
+            <p class="text-muted">Monitor your food safety inspections at a glance</p>
+            <hr />
+        </div>
+    </div>
+
+    <!-- KPI Cards -->
+    <div class="row mb-4">
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-info h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Inspections This Month</h5>
+                    <h2 class="display-4">@Model.InspectionsThisMonth</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-danger h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Failed Inspections This Month</h5>
+                    <h2 class="display-4">@Model.FailedInspectionsThisMonth</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-warning h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Overdue Follow-ups</h5>
+                    <h2 class="display-4">@Model.OverdueFollowUps</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-success h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Total Premises</h5>
+                    <h2 class="display-4">@Model.FilteredPremises.Count</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Card -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">🔍 Filter Premises</h5>
+        </div>
+        <div class="card-body">
+            <form method="get">
+                <div class="row g-3">
+                    <div class="col-md-5">
+                        <label for="selectedTown" class="form-label">Town:</label>
+                        <select name="selectedTown" id="selectedTown" class="form-select">
+                            <option value="">-- All Towns --</option>
+                            @foreach (var town in Model.AvailableTowns)
+                            {
+                                <option value="@town" selected="@(Model.SelectedTown == town)">@town</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="selectedRiskRating" class="form-label">Risk Rating:</label>
+                        <select name="selectedRiskRating" id="selectedRiskRating" class="form-select">
+                            <option value="">-- All Ratings --</option>
+                            @foreach (var rating in Model.AvailableRiskRatings)
+                            {
+                                <option value="@rating" selected="@(Model.SelectedRiskRating == rating)">@rating</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button type="submit" class="btn btn-primary w-100">Filter</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Premises Table Card -->
+    <div class="card shadow-sm">
+        <div class="card-header bg-info text-white">
+            <h5 class="mb-0">📋 Premises List (@Model.FilteredPremises.Count)</h5>
+        </div>
+        <div class="card-body p-0">
+            @if (Model.FilteredPremises.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Town</th>
+                                <th>Risk Rating</th>
+                                <th class="text-center">Inspections</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var premise in Model.FilteredPremises)
+                            {
+                                <tr>
+                                    <td><strong>@premise.Name</strong></td>
+                                    <td>@premise.Address</td>
+                                    <td>@premise.Town</td>
+                                    <td>
+                                        <span class="badge bg-@GetRiskColor(premise.RiskRating)">@premise.RiskRating</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="badge bg-secondary">@premise.Inspections.Count</span>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info mb-0">
+                    ℹ️ No premises found matching your filters. Try adjusting your selection.
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@functions {
+    string GetRiskColor(string rating)
+    {
+        return rating switch
+        {
+            "Low" => "success",
+            "Medium" => "warning",
+            "High" => "danger",
+            _ => "secondary"
+        };
+    }
+}

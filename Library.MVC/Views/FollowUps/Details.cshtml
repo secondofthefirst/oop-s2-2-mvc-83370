@@ -1,0 +1,96 @@
+@model Library.Domain.FollowUp
+
+@{
+    ViewData["Title"] = "Follow-up Details";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>Follow-up Details</h1>
+            <hr />
+            
+            <div class="card mb-4">
+                <div class="card-header">Inspection Information</div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">Premises</dt>
+                        <dd class="col-sm-9">
+                            <strong>@Model.Inspection?.Premises?.Name</strong><br />
+                            @Model.Inspection?.Premises?.Address, @Model.Inspection?.Premises?.Town
+                        </dd>
+
+                        <dt class="col-sm-3">Inspection Date</dt>
+                        <dd class="col-sm-9">@Model.Inspection?.InspectionDate.ToString("dd/MM/yyyy")</dd>
+
+                        <dt class="col-sm-3">Score</dt>
+                        <dd class="col-sm-9">@Model.Inspection?.Score / 100</dd>
+
+                        <dt class="col-sm-3">Outcome</dt>
+                        <dd class="col-sm-9">
+                            @if (Model.Inspection?.Outcome == "Pass")
+                            {
+                                <span class="badge bg-success">Pass</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">Fail</span>
+                            }
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">Follow-up Information</div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">Due Date</dt>
+                        <dd class="col-sm-9">
+                            <strong>@Model.DueDate.ToString("dd/MM/yyyy")</strong>
+                            @if (Model.Status == "Open" && Model.DueDate < DateTime.Now.Date)
+                            {
+                                <span class="badge bg-danger">OVERDUE</span>
+                            }
+                        </dd>
+
+                        <dt class="col-sm-3">Status</dt>
+                        <dd class="col-sm-9">
+                            @if (Model.Status == "Open" && Model.DueDate < DateTime.Now.Date)
+                            {
+                                <span class="badge bg-danger">Overdue</span>
+                            }
+                            else if (Model.Status == "Open")
+                            {
+                                <span class="badge bg-warning text-dark">Open</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-success">Closed</span>
+                            }
+                        </dd>
+
+                        @if (Model.ClosedDate.HasValue)
+                        {
+                            <dt class="col-sm-3">Closed Date</dt>
+                            <dd class="col-sm-9">@Model.ClosedDate.Value.ToString("dd/MM/yyyy")</dd>
+                        }
+                    </dl>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <a asp-action="Index" class="btn btn-secondary">Back to Follow-ups</a>
+                @if (User.IsInRole("Admin") || User.IsInRole("Inspector"))
+                {
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+                }
+                @if (User.IsInRole("Admin"))
+                {
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+                }
+                <a asp-controller="Inspections" asp-action="Details" asp-route-id="@Model.InspectionId" class="btn btn-info">View Inspection</a>
+            </div>
+        </div>
+    </div>
+</div>

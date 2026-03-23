@@ -1,0 +1,62 @@
+@model Library.Domain.Inspection
+
+@{
+    ViewData["Title"] = "Edit Inspection";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>Edit Inspection</h1>
+            <hr />
+            
+            <form asp-action="Edit" method="post" class="needs-validation">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                <input type="hidden" asp-for="Id" />
+
+                <div class="mb-3">
+                    <label asp-for="PremisesId" class="form-label">Premises</label>
+                    <select asp-for="PremisesId" class="form-select" asp-items="@(new SelectList(ViewBag.Premises, "Id", "Name"))">
+                    </select>
+                    <span asp-validation-for="PremisesId" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="InspectionDate" class="form-label">Inspection Date</label>
+                    <input asp-for="InspectionDate" type="datetime-local" class="form-control" />
+                    <small class="text-muted">Cannot be in the future</small>
+                    <span asp-validation-for="InspectionDate" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Score" class="form-label">Score (0-100)</label>
+                    <input asp-for="Score" type="number" min="0" max="100" class="form-control" />
+                    <span asp-validation-for="Score" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Outcome" class="form-label">Outcome</label>
+                    <select asp-for="Outcome" class="form-select">
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Notes" class="form-label">Notes</label>
+                    <textarea asp-for="Notes" class="form-control" rows="4"></textarea>
+                </div>
+
+                <div class="d-grid gap-2 d-sm-flex">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
