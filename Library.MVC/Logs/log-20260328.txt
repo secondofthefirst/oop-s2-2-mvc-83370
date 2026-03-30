@@ -1,0 +1,1476 @@
+2026-03-28 13:24:04.712 +01:00 [INF] User profile is available. Using 'C:\Users\livet\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-28 13:24:06.002 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[@normalizedName='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @normalizedName
+LIMIT 1
+2026-03-28 13:24:06.060 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@normalizedName='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @normalizedName
+LIMIT 1
+2026-03-28 13:24:06.063 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@normalizedName='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @normalizedName
+LIMIT 1
+2026-03-28 13:24:06.074 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@normalizedEmail='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @normalizedEmail
+LIMIT 2
+2026-03-28 13:24:06.104 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@normalizedRoleName='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @normalizedRoleName
+LIMIT 2
+2026-03-28 13:24:06.126 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p='?' (Size = 36), @p1='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."UserId", "a"."RoleId"
+FROM "AspNetUserRoles" AS "a"
+WHERE "a"."UserId" = @p AND "a"."RoleId" = @p1
+LIMIT 1
+2026-03-28 13:24:06.274 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-28 13:24:06.279 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2026-03-28 13:24:06.287 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-03-28 12:24:06.2828915+00:00');
+SELECT changes();
+2026-03-28 13:24:06.341 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2026-03-28 13:24:06.355 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2026-03-28 13:24:06.357 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-03-28 13:24:06.361 +01:00 [INF] No migrations were applied. The database is already up to date.
+2026-03-28 13:24:06.365 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2026-03-28 13:24:06.572 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Premises" AS "p")
+2026-03-28 13:24:06.787 +01:00 [INF] Starting web host
+2026-03-28 13:24:07.003 +01:00 [INF] Now listening on: https://localhost:7186
+2026-03-28 13:24:07.004 +01:00 [INF] Now listening on: http://localhost:5167
+2026-03-28 13:24:07.042 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-28 13:24:07.043 +01:00 [INF] Hosting environment: Development
+2026-03-28 13:24:07.044 +01:00 [INF] Content root path: C:\Users\livet\Downloads\AAAAAA\Library.MVC
+2026-03-28 13:24:07.403 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/ - null null
+2026-03-28 13:24:07.611 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.HomeController.Index (Library.MVC)'
+2026-03-28 13:24:07.621 +01:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Library.MVC.Controllers.HomeController (Library.MVC).
+2026-03-28 13:24:07.634 +01:00 [INF] Executing ViewResult, running view Index.
+2026-03-28 13:24:07.808 +01:00 [INF] Executed ViewResult - view Index executed in 176.8189ms.
+2026-03-28 13:24:07.814 +01:00 [INF] Executed action Library.MVC.Controllers.HomeController.Index (Library.MVC) in 190.5912ms
+2026-03-28 13:24:07.815 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.HomeController.Index (Library.MVC)'
+2026-03-28 13:24:07.819 +01:00 [INF] HTTP GET / responded 200 in 295.7469 ms
+2026-03-28 13:24:07.829 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/ - 200 null text/html; charset=utf-8 432.0584ms
+2026-03-28 13:24:07.848 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-03-28 13:24:07.848 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-03-28 13:24:07.848 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.styles.css?v=v60FpfD527l2DnwlZAhXk2XBNNsY9r3PXiddUtK0NIw - null null
+2026-03-28 13:24:07.848 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-03-28 13:24:07.848 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.css?v=j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg - null null
+2026-03-28 13:24:07.848 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.js - null null
+2026-03-28 13:24:07.853 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:24:07.853 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:24:07.886 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\wwwroot\js\site.js'
+2026-03-28 13:24:07.887 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2026-03-28 13:24:07.887 +01:00 [INF] Sending file. Request path: '/Library.MVC.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\scopedcss\bundle\Library.MVC.styles.css'
+2026-03-28 13:24:07.887 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\wwwroot\css\site.css'
+2026-03-28 13:24:07.890 +01:00 [INF] HTTP GET /js/site.js responded 200 in 26.3876 ms
+2026-03-28 13:24:07.894 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 40.5877ms
+2026-03-28 13:24:07.894 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 37.1314 ms
+2026-03-28 13:24:07.896 +01:00 [INF] HTTP GET /Library.MVC.styles.css responded 200 in 34.7137 ms
+2026-03-28 13:24:07.897 +01:00 [INF] HTTP GET /css/site.css responded 200 in 28.0192 ms
+2026-03-28 13:24:07.898 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 231 text/javascript 50.5185ms
+2026-03-28 13:24:07.902 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.css - 200 232803 text/css 54.8135ms
+2026-03-28 13:24:07.905 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.styles.css?v=v60FpfD527l2DnwlZAhXk2XBNNsY9r3PXiddUtK0NIw - 200 1109 text/css 57.3645ms
+2026-03-28 13:24:07.907 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.css?v=j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg - 200 667 text/css 59.5396ms
+2026-03-28 13:24:07.917 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-03-28 13:24:07.917 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:24:07.924 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\wwwroot\js\site.js'
+2026-03-28 13:24:07.925 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 7.9507ms
+2026-03-28 13:24:07.926 +01:00 [INF] HTTP GET /js/site.js responded 200 in 3.1338 ms
+2026-03-28 13:24:07.931 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 231 text/javascript 13.9208ms
+2026-03-28 13:24:07.936 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 85.1879ms
+2026-03-28 13:24:07.940 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2026-03-28 13:24:07.941 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 82.4586 ms
+2026-03-28 13:24:07.942 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80721 text/javascript 94.4948ms
+2026-03-28 13:24:07.976 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\wwwroot\lib\jquery\dist\jquery.min.js'
+2026-03-28 13:24:07.977 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 98.9663 ms
+2026-03-28 13:24:07.979 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.js - 200 87533 text/javascript 131.8113ms
+2026-03-28 13:24:07.997 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-03-28 13:24:07.997 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:24:07.998 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.js - null null
+2026-03-28 13:24:08.002 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2026-03-28 13:24:08.010 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 10.2069 ms
+2026-03-28 13:24:08.011 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\wwwroot\lib\jquery\dist\jquery.min.js'
+2026-03-28 13:24:08.012 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.7989ms
+2026-03-28 13:24:08.013 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80721 text/javascript 15.8105ms
+2026-03-28 13:24:08.014 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 5.2346 ms
+2026-03-28 13:24:08.021 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.js - 200 87533 text/javascript 23.3611ms
+2026-03-28 13:24:08.341 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/favicon.ico - null null
+2026-03-28 13:24:08.355 +01:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\wwwroot\favicon.ico'
+2026-03-28 13:24:08.357 +01:00 [INF] HTTP GET /favicon.ico responded 200 in 12.9373 ms
+2026-03-28 13:24:08.360 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/favicon.ico - 200 5430 image/x-icon 18.4977ms
+2026-03-28 13:24:11.944 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Dashboard - null null
+2026-03-28 13:24:11.960 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-28 13:24:11.966 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2026-03-28 13:24:11.967 +01:00 [INF] HTTP GET /Dashboard responded 302 in 16.9538 ms
+2026-03-28 13:24:11.968 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Dashboard - 302 null null 24.865ms
+2026-03-28 13:24:11.979 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Identity/Account/Login?ReturnUrl=%2FDashboard - null null
+2026-03-28 13:24:11.988 +01:00 [INF] Executing endpoint '/Account/Login'
+2026-03-28 13:24:12.008 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2026-03-28 13:24:12.028 +01:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.LoginModel.OnGetAsync - ModelState is "Valid"
+2026-03-28 13:24:12.034 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2026-03-28 13:24:12.037 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-28 13:24:12.040 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-28 13:24:12.041 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-28 13:24:12.099 +01:00 [INF] Executed page /Account/Login in 88.5936ms
+2026-03-28 13:24:12.100 +01:00 [INF] Executed endpoint '/Account/Login'
+2026-03-28 13:24:12.101 +01:00 [INF] HTTP GET /Identity/Account/Login responded 200 in 119.0968 ms
+2026-03-28 13:24:12.103 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Identity/Account/Login?ReturnUrl=%2FDashboard - 200 null text/html; charset=utf-8 123.7316ms
+2026-03-28 13:24:12.157 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - null null
+2026-03-28 13:24:12.157 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - null null
+2026-03-28 13:24:12.157 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - null null
+2026-03-28 13:24:12.157 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:24:12.158 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:24:12.158 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:24:12.158 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Identity/lib/jquery-validation/dist/jquery.validate.js - null null
+2026-03-28 13:24:12.158 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Identity/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js - null null
+2026-03-28 13:24:12.159 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:24:12.159 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:24:12.171 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.168 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.171 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.165 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.165 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.165 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.181 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 22.5907ms
+2026-03-28 13:24:12.183 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.8462ms
+2026-03-28 13:24:12.225 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js'. Physical path: 'C:\Users\livet\.nuget\packages\microsoft.aspnetcore.identity.ui\10.0.3\staticwebassets\V5\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js'
+2026-03-28 13:24:12.226 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\Users\livet\.nuget\packages\microsoft.aspnetcore.identity.ui\10.0.3\staticwebassets\V5\lib\jquery-validation\dist\jquery.validate.js'
+2026-03-28 13:24:12.227 +01:00 [INF] Sending file. Request path: 'Library.MVC.r533r0ga00.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\huve81kccj-{0}-r533r0ga00-r533r0ga00.gz'
+2026-03-28 13:24:12.227 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:24:12.227 +01:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\xre84udqq5-{0}-b9sayid5wm-b9sayid5wm.gz'
+2026-03-28 13:24:12.227 +01:00 [INF] HTTP GET /Identity/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js responded 200 in 51.7234 ms
+2026-03-28 13:24:12.229 +01:00 [INF] HTTP GET /Identity/lib/jquery-validation/dist/jquery.validate.js responded 200 in 55.5873 ms
+2026-03-28 13:24:12.229 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:24:12.229 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3g03db57xa-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-03-28 13:24:12.229 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:24:12.230 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.231 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.232 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.233 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Identity/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js - 200 19385 text/javascript 75.2161ms
+2026-03-28 13:24:12.235 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Identity/lib/jquery-validation/dist/jquery.validate.js - 200 52536 text/javascript 76.8117ms
+2026-03-28 13:24:12.237 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.238 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.239 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.240 +01:00 [INF] HTTP GET /Library.MVC.r533r0ga00.styles.css responded 200 in 75.8464 ms
+2026-03-28 13:24:12.241 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 69.9184 ms
+2026-03-28 13:24:12.242 +01:00 [INF] HTTP GET /css/site.b9sayid5wm.css responded 200 in 80.1518 ms
+2026-03-28 13:24:12.247 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 81.0435 ms
+2026-03-28 13:24:12.248 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css responded 200 in 88.9562 ms
+2026-03-28 13:24:12.249 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 80.1174 ms
+2026-03-28 13:24:12.251 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - 200 1142 text/css 94.1188ms
+2026-03-28 13:24:12.252 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 94.5503ms
+2026-03-28 13:24:12.254 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - 200 700 text/css 97.3118ms
+2026-03-28 13:24:12.256 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 98.9238ms
+2026-03-28 13:24:12.257 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - 200 232871 text/css 100.5493ms
+2026-03-28 13:24:12.259 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 101.042ms
+2026-03-28 13:24:12.282 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Identity/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js - null null
+2026-03-28 13:24:12.282 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Identity/lib/jquery-validation/dist/jquery.validate.js - null null
+2026-03-28 13:24:12.282 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:24:12.283 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:24:12.284 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:24:12.285 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js'. Physical path: 'C:\Users\livet\.nuget\packages\microsoft.aspnetcore.identity.ui\10.0.3\staticwebassets\V5\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js'
+2026-03-28 13:24:12.288 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\Users\livet\.nuget\packages\microsoft.aspnetcore.identity.ui\10.0.3\staticwebassets\V5\lib\jquery-validation\dist\jquery.validate.js'
+2026-03-28 13:24:12.291 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.294 +01:00 [INF] HTTP GET /Identity/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js responded 200 in 10.1763 ms
+2026-03-28 13:24:12.296 +01:00 [INF] HTTP GET /Identity/lib/jquery-validation/dist/jquery.validate.js responded 200 in 9.0230 ms
+2026-03-28 13:24:12.297 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:24:12.298 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Identity/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js - 200 19385 text/javascript 16.6465ms
+2026-03-28 13:24:12.300 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Identity/lib/jquery-validation/dist/jquery.validate.js - 200 52536 text/javascript 17.9634ms
+2026-03-28 13:24:12.301 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.301 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.308 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 19.2869 ms
+2026-03-28 13:24:12.310 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 28.0516ms
+2026-03-28 13:24:12.312 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:24:12.314 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.316 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 24.5187 ms
+2026-03-28 13:24:12.318 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 34.3687ms
+2026-03-28 13:24:12.344 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.349 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:24:12.350 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:12.351 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 57.8767 ms
+2026-03-28 13:24:12.353 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 69.4872ms
+2026-03-28 13:24:23.924 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7186/Identity/Account/Login?ReturnUrl=%2FDashboard - application/x-www-form-urlencoded 264
+2026-03-28 13:24:23.933 +01:00 [INF] Executing endpoint '/Account/Login'
+2026-03-28 13:24:23.934 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2026-03-28 13:24:23.964 +01:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.LoginModel.OnPostAsync - ModelState is "Valid"
+2026-03-28 13:24:23.985 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@normalizedUserName='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @normalizedUserName
+LIMIT 1
+2026-03-28 13:24:24.051 +01:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-28 13:24:24.058 +01:00 [INF] Executed page /Account/Login in 123.0574ms
+2026-03-28 13:24:24.060 +01:00 [INF] Executed endpoint '/Account/Login'
+2026-03-28 13:24:24.061 +01:00 [INF] HTTP POST /Identity/Account/Login responded 200 in 131.3129 ms
+2026-03-28 13:24:24.066 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7186/Identity/Account/Login?ReturnUrl=%2FDashboard - 200 null text/html; charset=utf-8 142.5326ms
+2026-03-28 13:24:24.116 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - null null
+2026-03-28 13:24:24.116 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - null null
+2026-03-28 13:24:24.116 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - null null
+2026-03-28 13:24:24.116 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:24:24.117 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:24:24.117 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:24:24.117 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:24:24.117 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:24:24.123 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:24.129 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:24.125 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:24.128 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:24.120 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:24.139 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:24:24.123 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:24.134 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 16.5737ms
+2026-03-28 13:24:24.136 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.6649ms
+2026-03-28 13:24:24.136 +01:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\xre84udqq5-{0}-b9sayid5wm-b9sayid5wm.gz'
+2026-03-28 13:24:24.136 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:24:24.138 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:24:24.140 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:24.141 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3g03db57xa-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-03-28 13:24:24.142 +01:00 [INF] Sending file. Request path: 'Library.MVC.r533r0ga00.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\huve81kccj-{0}-r533r0ga00-r533r0ga00.gz'
+2026-03-28 13:24:24.148 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:24.149 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:24.150 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:24.151 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 24.0088 ms
+2026-03-28 13:24:24.152 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:24.153 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:24.154 +01:00 [INF] HTTP GET /css/site.b9sayid5wm.css responded 200 in 33.0507 ms
+2026-03-28 13:24:24.154 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 25.4227 ms
+2026-03-28 13:24:24.155 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 30.9026 ms
+2026-03-28 13:24:24.157 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 40.3222ms
+2026-03-28 13:24:24.158 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css responded 200 in 39.1986 ms
+2026-03-28 13:24:24.159 +01:00 [INF] HTTP GET /Library.MVC.r533r0ga00.styles.css responded 200 in 36.1875 ms
+2026-03-28 13:24:24.160 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - 200 700 text/css 44.4125ms
+2026-03-28 13:24:24.162 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 45.1708ms
+2026-03-28 13:24:24.164 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 47.6309ms
+2026-03-28 13:24:24.168 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - 200 232871 text/css 52.0648ms
+2026-03-28 13:24:24.169 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - 200 1142 text/css 53.341ms
+2026-03-28 13:24:30.300 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7186/Identity/Account/Login?ReturnUrl=%2FDashboard - application/x-www-form-urlencoded 264
+2026-03-28 13:24:30.303 +01:00 [INF] Executing endpoint '/Account/Login'
+2026-03-28 13:24:30.304 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2026-03-28 13:24:30.307 +01:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.LoginModel.OnPostAsync - ModelState is "Valid"
+2026-03-28 13:24:30.309 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@normalizedUserName='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @normalizedUserName
+LIMIT 1
+2026-03-28 13:24:30.401 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@user_Id='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ClaimType", "a"."ClaimValue", "a"."UserId"
+FROM "AspNetUserClaims" AS "a"
+WHERE "a"."UserId" = @user_Id
+2026-03-28 13:24:30.419 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@userId='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @userId
+2026-03-28 13:24:30.422 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@normalizedName='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @normalizedName
+LIMIT 1
+2026-03-28 13:24:30.430 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@role_Id='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."ClaimType", "a"."ClaimValue"
+FROM "AspNetRoleClaims" AS "a"
+WHERE "a"."RoleId" = @role_Id
+2026-03-28 13:24:30.434 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-03-28 13:24:30.436 +01:00 [INF] User logged in.
+2026-03-28 13:24:30.436 +01:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2026-03-28 13:24:30.438 +01:00 [INF] Executing LocalRedirectResult, redirecting to /Dashboard.
+2026-03-28 13:24:30.439 +01:00 [INF] Executed page /Account/Login in 133.9313ms
+2026-03-28 13:24:30.440 +01:00 [INF] Executed endpoint '/Account/Login'
+2026-03-28 13:24:30.441 +01:00 [INF] HTTP POST /Identity/Account/Login responded 302 in 138.5959 ms
+2026-03-28 13:24:30.443 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7186/Identity/Account/Login?ReturnUrl=%2FDashboard - 302 null null 143.8148ms
+2026-03-28 13:24:30.453 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Dashboard - null null
+2026-03-28 13:24:30.462 +01:00 [INF] Executing endpoint '/Dashboard'
+2026-03-28 13:24:30.468 +01:00 [INF] Route matched with {page = "/Dashboard", action = "", controller = "", area = ""}. Executing page /Dashboard
+2026-03-28 13:24:30.470 +01:00 [INF] Executing handler method Library.MVC.Pages.DashboardModel.OnGetAsync - ModelState is "Valid"
+2026-03-28 13:24:30.491 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays
+2026-03-28 13:24:30.497 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays AND "i"."Outcome" = 'Fail'
+2026-03-28 13:24:30.501 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@today='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @today AND "f"."Status" = 'Open'
+2026-03-28 13:24:30.514 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p0"."Town"
+FROM (
+    SELECT DISTINCT "p"."Town"
+    FROM "Premises" AS "p"
+) AS "p0"
+ORDER BY "p0"."Town"
+2026-03-28 13:24:30.557 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Premises" AS "p"
+LEFT JOIN "Inspections" AS "i" ON "p"."Id" = "i"."PremisesId"
+ORDER BY "p"."Id"
+2026-03-28 13:24:30.593 +01:00 [INF] Dashboard loaded - Month: 3, Inspections: 8, Failed: 6, Overdue: 2
+2026-03-28 13:24:30.596 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-28 13:24:30.597 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-28 13:24:30.597 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-28 13:24:30.618 +01:00 [INF] Executed page /Dashboard in 149.4356ms
+2026-03-28 13:24:30.620 +01:00 [INF] Executed endpoint '/Dashboard'
+2026-03-28 13:24:30.621 +01:00 [INF] HTTP GET /Dashboard responded 200 in 164.2777 ms
+2026-03-28 13:24:30.622 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Dashboard - 200 null text/html; charset=utf-8 169.2254ms
+2026-03-28 13:24:30.668 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - null null
+2026-03-28 13:24:30.668 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - null null
+2026-03-28 13:24:30.668 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - null null
+2026-03-28 13:24:30.669 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:24:30.669 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:24:30.669 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:24:30.670 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:24:30.670 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:24:30.676 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:30.676 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:30.678 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:30.681 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:30.682 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:30.672 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:30.689 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 18.7133ms
+2026-03-28 13:24:30.690 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.1014ms
+2026-03-28 13:24:30.690 +01:00 [INF] Sending file. Request path: 'Library.MVC.r533r0ga00.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\huve81kccj-{0}-r533r0ga00-r533r0ga00.gz'
+2026-03-28 13:24:30.691 +01:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\xre84udqq5-{0}-b9sayid5wm-b9sayid5wm.gz'
+2026-03-28 13:24:30.692 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:24:30.693 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:24:30.694 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:24:30.698 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3g03db57xa-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-03-28 13:24:30.702 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:30.703 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:30.704 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:30.705 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:30.706 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:30.707 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:30.708 +01:00 [INF] HTTP GET /Library.MVC.r533r0ga00.styles.css responded 200 in 32.6647 ms
+2026-03-28 13:24:30.709 +01:00 [INF] HTTP GET /css/site.b9sayid5wm.css responded 200 in 36.0112 ms
+2026-03-28 13:24:30.710 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 32.3110 ms
+2026-03-28 13:24:30.711 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 30.8200 ms
+2026-03-28 13:24:30.712 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 29.8069 ms
+2026-03-28 13:24:30.712 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css responded 200 in 41.8548 ms
+2026-03-28 13:24:30.714 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - 200 1142 text/css 45.6454ms
+2026-03-28 13:24:30.715 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - 200 700 text/css 47.1345ms
+2026-03-28 13:24:30.717 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 48.1301ms
+2026-03-28 13:24:30.718 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 49.4698ms
+2026-03-28 13:24:30.720 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 50.696ms
+2026-03-28 13:24:30.722 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - 200 232871 text/css 53.7013ms
+2026-03-28 13:24:39.593 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=Bristol&selectedRiskRating=Low - null null
+2026-03-28 13:24:39.598 +01:00 [INF] Executing endpoint '/Dashboard'
+2026-03-28 13:24:39.599 +01:00 [INF] Route matched with {page = "/Dashboard", action = "", controller = "", area = ""}. Executing page /Dashboard
+2026-03-28 13:24:39.601 +01:00 [INF] Executing handler method Library.MVC.Pages.DashboardModel.OnGetAsync - ModelState is "Valid"
+2026-03-28 13:24:39.604 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays
+2026-03-28 13:24:39.606 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays AND "i"."Outcome" = 'Fail'
+2026-03-28 13:24:39.608 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@today='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @today AND "f"."Status" = 'Open'
+2026-03-28 13:24:39.610 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p0"."Town"
+FROM (
+    SELECT DISTINCT "p"."Town"
+    FROM "Premises" AS "p"
+) AS "p0"
+ORDER BY "p0"."Town"
+2026-03-28 13:24:39.612 +01:00 [INF] Dashboard filtered by Town: Bristol
+2026-03-28 13:24:39.613 +01:00 [INF] Dashboard filtered by RiskRating: Low
+2026-03-28 13:24:39.626 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@SelectedTown='?' (Size = 7), @SelectedRiskRating='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Premises" AS "p"
+LEFT JOIN "Inspections" AS "i" ON "p"."Id" = "i"."PremisesId"
+WHERE "p"."Town" = @SelectedTown AND "p"."RiskRating" = @SelectedRiskRating
+ORDER BY "p"."Id"
+2026-03-28 13:24:39.628 +01:00 [INF] Dashboard loaded - Month: 3, Inspections: 8, Failed: 6, Overdue: 2
+2026-03-28 13:24:39.629 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-28 13:24:39.630 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-28 13:24:39.631 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-28 13:24:39.634 +01:00 [INF] Executed page /Dashboard in 33.2066ms
+2026-03-28 13:24:39.635 +01:00 [INF] Executed endpoint '/Dashboard'
+2026-03-28 13:24:39.636 +01:00 [INF] HTTP GET /Dashboard responded 200 in 39.5520 ms
+2026-03-28 13:24:39.638 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=Bristol&selectedRiskRating=Low - 200 null text/html; charset=utf-8 45.2068ms
+2026-03-28 13:24:39.693 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - null null
+2026-03-28 13:24:39.693 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - null null
+2026-03-28 13:24:39.693 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - null null
+2026-03-28 13:24:39.694 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:24:39.694 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:24:39.694 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:24:39.695 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:24:39.695 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:24:39.700 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:39.701 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:39.698 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:39.696 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:39.705 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:39.703 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:39.709 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 13.7145ms
+2026-03-28 13:24:39.710 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.9456ms
+2026-03-28 13:24:39.710 +01:00 [INF] Sending file. Request path: 'Library.MVC.r533r0ga00.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\huve81kccj-{0}-r533r0ga00-r533r0ga00.gz'
+2026-03-28 13:24:39.711 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:24:39.711 +01:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\xre84udqq5-{0}-b9sayid5wm-b9sayid5wm.gz'
+2026-03-28 13:24:39.713 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:24:39.714 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3g03db57xa-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-03-28 13:24:39.715 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:24:39.720 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:39.721 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:39.722 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:39.723 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:39.724 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:39.725 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:39.725 +01:00 [INF] HTTP GET /Library.MVC.r533r0ga00.styles.css responded 200 in 26.1068 ms
+2026-03-28 13:24:39.726 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 25.0501 ms
+2026-03-28 13:24:39.727 +01:00 [INF] HTTP GET /css/site.b9sayid5wm.css responded 200 in 29.4391 ms
+2026-03-28 13:24:39.727 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 22.9385 ms
+2026-03-28 13:24:39.728 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css responded 200 in 32.9783 ms
+2026-03-28 13:24:39.729 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 26.3825 ms
+2026-03-28 13:24:39.731 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - 200 1142 text/css 38.0816ms
+2026-03-28 13:24:39.733 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 39.1147ms
+2026-03-28 13:24:39.734 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - 200 700 text/css 41.2521ms
+2026-03-28 13:24:39.736 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 41.2085ms
+2026-03-28 13:24:39.737 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - 200 232871 text/css 44.3453ms
+2026-03-28 13:24:39.739 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 44.4842ms
+2026-03-28 13:24:44.267 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=Bristol&selectedRiskRating=Medium - null null
+2026-03-28 13:24:44.270 +01:00 [INF] Executing endpoint '/Dashboard'
+2026-03-28 13:24:44.271 +01:00 [INF] Route matched with {page = "/Dashboard", action = "", controller = "", area = ""}. Executing page /Dashboard
+2026-03-28 13:24:44.272 +01:00 [INF] Executing handler method Library.MVC.Pages.DashboardModel.OnGetAsync - ModelState is "Valid"
+2026-03-28 13:24:44.274 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays
+2026-03-28 13:24:44.276 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays AND "i"."Outcome" = 'Fail'
+2026-03-28 13:24:44.278 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@today='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @today AND "f"."Status" = 'Open'
+2026-03-28 13:24:44.280 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p0"."Town"
+FROM (
+    SELECT DISTINCT "p"."Town"
+    FROM "Premises" AS "p"
+) AS "p0"
+ORDER BY "p0"."Town"
+2026-03-28 13:24:44.282 +01:00 [INF] Dashboard filtered by Town: Bristol
+2026-03-28 13:24:44.282 +01:00 [INF] Dashboard filtered by RiskRating: Medium
+2026-03-28 13:24:44.283 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@SelectedTown='?' (Size = 7), @SelectedRiskRating='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Premises" AS "p"
+LEFT JOIN "Inspections" AS "i" ON "p"."Id" = "i"."PremisesId"
+WHERE "p"."Town" = @SelectedTown AND "p"."RiskRating" = @SelectedRiskRating
+ORDER BY "p"."Id"
+2026-03-28 13:24:44.285 +01:00 [INF] Dashboard loaded - Month: 3, Inspections: 8, Failed: 6, Overdue: 2
+2026-03-28 13:24:44.286 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-28 13:24:44.287 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-28 13:24:44.288 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-28 13:24:44.290 +01:00 [INF] Executed page /Dashboard in 18.1069ms
+2026-03-28 13:24:44.292 +01:00 [INF] Executed endpoint '/Dashboard'
+2026-03-28 13:24:44.292 +01:00 [INF] HTTP GET /Dashboard responded 200 in 22.6830 ms
+2026-03-28 13:24:44.305 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=Bristol&selectedRiskRating=Medium - 200 null text/html; charset=utf-8 37.6054ms
+2026-03-28 13:24:44.343 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - null null
+2026-03-28 13:24:44.343 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - null null
+2026-03-28 13:24:44.343 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - null null
+2026-03-28 13:24:44.344 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:24:44.344 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:24:44.344 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:24:44.344 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:24:44.346 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:24:44.353 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:44.352 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:44.355 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:44.348 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:44.346 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:44.350 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:44.362 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 16.0487ms
+2026-03-28 13:24:44.363 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.332ms
+2026-03-28 13:24:44.364 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:24:44.364 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:24:44.365 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:24:44.366 +01:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\xre84udqq5-{0}-b9sayid5wm-b9sayid5wm.gz'
+2026-03-28 13:24:44.368 +01:00 [INF] Sending file. Request path: 'Library.MVC.r533r0ga00.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\huve81kccj-{0}-r533r0ga00-r533r0ga00.gz'
+2026-03-28 13:24:44.368 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3g03db57xa-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-03-28 13:24:44.373 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:44.374 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:44.375 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:44.376 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:44.378 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:44.379 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:44.379 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 26.3801 ms
+2026-03-28 13:24:44.380 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 29.1537 ms
+2026-03-28 13:24:44.381 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 26.2116 ms
+2026-03-28 13:24:44.382 +01:00 [INF] HTTP GET /css/site.b9sayid5wm.css responded 200 in 34.3533 ms
+2026-03-28 13:24:44.382 +01:00 [INF] HTTP GET /Library.MVC.r533r0ga00.styles.css responded 200 in 33.0165 ms
+2026-03-28 13:24:44.383 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css responded 200 in 37.7530 ms
+2026-03-28 13:24:44.384 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 40.4541ms
+2026-03-28 13:24:44.386 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 42.1019ms
+2026-03-28 13:24:44.387 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 42.8106ms
+2026-03-28 13:24:44.388 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - 200 700 text/css 45.3693ms
+2026-03-28 13:24:44.390 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - 200 1142 text/css 46.503ms
+2026-03-28 13:24:44.391 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - 200 232871 text/css 48.3708ms
+2026-03-28 13:24:47.943 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=&selectedRiskRating=Medium - null null
+2026-03-28 13:24:47.947 +01:00 [INF] Executing endpoint '/Dashboard'
+2026-03-28 13:24:47.948 +01:00 [INF] Route matched with {page = "/Dashboard", action = "", controller = "", area = ""}. Executing page /Dashboard
+2026-03-28 13:24:47.949 +01:00 [INF] Executing handler method Library.MVC.Pages.DashboardModel.OnGetAsync - ModelState is "Valid"
+2026-03-28 13:24:47.951 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays
+2026-03-28 13:24:47.953 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays AND "i"."Outcome" = 'Fail'
+2026-03-28 13:24:47.955 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@today='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @today AND "f"."Status" = 'Open'
+2026-03-28 13:24:47.957 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p0"."Town"
+FROM (
+    SELECT DISTINCT "p"."Town"
+    FROM "Premises" AS "p"
+) AS "p0"
+ORDER BY "p0"."Town"
+2026-03-28 13:24:47.958 +01:00 [INF] Dashboard filtered by RiskRating: Medium
+2026-03-28 13:24:47.970 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@SelectedRiskRating='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Premises" AS "p"
+LEFT JOIN "Inspections" AS "i" ON "p"."Id" = "i"."PremisesId"
+WHERE "p"."RiskRating" = @SelectedRiskRating
+ORDER BY "p"."Id"
+2026-03-28 13:24:47.973 +01:00 [INF] Dashboard loaded - Month: 3, Inspections: 8, Failed: 6, Overdue: 2
+2026-03-28 13:24:47.974 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-28 13:24:47.976 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-28 13:24:47.976 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-28 13:24:47.978 +01:00 [INF] Executed page /Dashboard in 29.4388ms
+2026-03-28 13:24:47.979 +01:00 [INF] Executed endpoint '/Dashboard'
+2026-03-28 13:24:47.980 +01:00 [INF] HTTP GET /Dashboard responded 200 in 33.5735 ms
+2026-03-28 13:24:47.982 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=&selectedRiskRating=Medium - 200 null text/html; charset=utf-8 39.0927ms
+2026-03-28 13:24:48.033 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - null null
+2026-03-28 13:24:48.033 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - null null
+2026-03-28 13:24:48.033 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - null null
+2026-03-28 13:24:48.034 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:24:48.034 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:24:48.034 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:24:48.034 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:24:48.035 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:24:48.046 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:48.040 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:48.043 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:48.038 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:48.036 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:48.044 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:48.052 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 17.3647ms
+2026-03-28 13:24:48.053 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.6385ms
+2026-03-28 13:24:48.053 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:24:48.054 +01:00 [INF] Sending file. Request path: 'Library.MVC.r533r0ga00.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\huve81kccj-{0}-r533r0ga00-r533r0ga00.gz'
+2026-03-28 13:24:48.056 +01:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\xre84udqq5-{0}-b9sayid5wm-b9sayid5wm.gz'
+2026-03-28 13:24:48.057 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:24:48.058 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3g03db57xa-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-03-28 13:24:48.059 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:24:48.064 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:48.065 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:48.066 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:48.067 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:48.068 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:48.070 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:48.071 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 24.7335 ms
+2026-03-28 13:24:48.071 +01:00 [INF] HTTP GET /Library.MVC.r533r0ga00.styles.css responded 200 in 31.7745 ms
+2026-03-28 13:24:48.072 +01:00 [INF] HTTP GET /css/site.b9sayid5wm.css responded 200 in 34.7883 ms
+2026-03-28 13:24:48.073 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 31.2261 ms
+2026-03-28 13:24:48.074 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css responded 200 in 38.7200 ms
+2026-03-28 13:24:48.075 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 30.7811 ms
+2026-03-28 13:24:48.076 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 41.9371ms
+2026-03-28 13:24:48.078 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - 200 1142 text/css 44.5623ms
+2026-03-28 13:24:48.079 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - 200 700 text/css 46.1273ms
+2026-03-28 13:24:48.081 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 46.7899ms
+2026-03-28 13:24:48.082 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - 200 232871 text/css 49.0795ms
+2026-03-28 13:24:48.083 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 49.2324ms
+2026-03-28 13:24:51.017 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=&selectedRiskRating= - null null
+2026-03-28 13:24:51.020 +01:00 [INF] Executing endpoint '/Dashboard'
+2026-03-28 13:24:51.021 +01:00 [INF] Route matched with {page = "/Dashboard", action = "", controller = "", area = ""}. Executing page /Dashboard
+2026-03-28 13:24:51.022 +01:00 [INF] Executing handler method Library.MVC.Pages.DashboardModel.OnGetAsync - ModelState is "Valid"
+2026-03-28 13:24:51.024 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays
+2026-03-28 13:24:51.027 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays AND "i"."Outcome" = 'Fail'
+2026-03-28 13:24:51.029 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@today='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @today AND "f"."Status" = 'Open'
+2026-03-28 13:24:51.032 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p0"."Town"
+FROM (
+    SELECT DISTINCT "p"."Town"
+    FROM "Premises" AS "p"
+) AS "p0"
+ORDER BY "p0"."Town"
+2026-03-28 13:24:51.033 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Premises" AS "p"
+LEFT JOIN "Inspections" AS "i" ON "p"."Id" = "i"."PremisesId"
+ORDER BY "p"."Id"
+2026-03-28 13:24:51.036 +01:00 [INF] Dashboard loaded - Month: 3, Inspections: 8, Failed: 6, Overdue: 2
+2026-03-28 13:24:51.037 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-28 13:24:51.038 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-28 13:24:51.039 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-28 13:24:51.040 +01:00 [INF] Executed page /Dashboard in 18.1849ms
+2026-03-28 13:24:51.041 +01:00 [INF] Executed endpoint '/Dashboard'
+2026-03-28 13:24:51.042 +01:00 [INF] HTTP GET /Dashboard responded 200 in 23.1023 ms
+2026-03-28 13:24:51.044 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=&selectedRiskRating= - 200 null text/html; charset=utf-8 27.6507ms
+2026-03-28 13:24:51.107 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - null null
+2026-03-28 13:24:51.107 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - null null
+2026-03-28 13:24:51.108 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:24:51.108 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - null null
+2026-03-28 13:24:51.108 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:24:51.109 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:24:51.109 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:24:51.109 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:24:51.118 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:51.118 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:51.120 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:51.130 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.7248ms
+2026-03-28 13:24:51.124 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 14.9909ms
+2026-03-28 13:24:51.118 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:51.118 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:51.118 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:51.132 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:24:51.133 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:24:51.133 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:24:51.140 +01:00 [INF] Sending file. Request path: 'Library.MVC.r533r0ga00.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\huve81kccj-{0}-r533r0ga00-r533r0ga00.gz'
+2026-03-28 13:24:51.141 +01:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\xre84udqq5-{0}-b9sayid5wm-b9sayid5wm.gz'
+2026-03-28 13:24:51.145 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:51.146 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3g03db57xa-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-03-28 13:24:51.147 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:51.148 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:51.149 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:51.150 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:51.150 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 32.6730 ms
+2026-03-28 13:24:51.151 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:51.152 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 34.6829 ms
+2026-03-28 13:24:51.153 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 33.0505 ms
+2026-03-28 13:24:51.154 +01:00 [INF] HTTP GET /Library.MVC.r533r0ga00.styles.css responded 200 in 36.1019 ms
+2026-03-28 13:24:51.154 +01:00 [INF] HTTP GET /css/site.b9sayid5wm.css responded 200 in 36.8496 ms
+2026-03-28 13:24:51.156 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 48.4718ms
+2026-03-28 13:24:51.157 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css responded 200 in 39.3103 ms
+2026-03-28 13:24:51.158 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 50.6885ms
+2026-03-28 13:24:51.160 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 50.7883ms
+2026-03-28 13:24:51.161 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - 200 1142 text/css 53.5474ms
+2026-03-28 13:24:51.162 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - 200 700 text/css 55.064ms
+2026-03-28 13:24:51.166 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - 200 232871 text/css 59.2873ms
+2026-03-28 13:24:57.401 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=Bath&selectedRiskRating= - null null
+2026-03-28 13:24:57.404 +01:00 [INF] Executing endpoint '/Dashboard'
+2026-03-28 13:24:57.405 +01:00 [INF] Route matched with {page = "/Dashboard", action = "", controller = "", area = ""}. Executing page /Dashboard
+2026-03-28 13:24:57.406 +01:00 [INF] Executing handler method Library.MVC.Pages.DashboardModel.OnGetAsync - ModelState is "Valid"
+2026-03-28 13:24:57.408 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays
+2026-03-28 13:24:57.411 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays AND "i"."Outcome" = 'Fail'
+2026-03-28 13:24:57.413 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@today='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @today AND "f"."Status" = 'Open'
+2026-03-28 13:24:57.414 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p0"."Town"
+FROM (
+    SELECT DISTINCT "p"."Town"
+    FROM "Premises" AS "p"
+) AS "p0"
+ORDER BY "p0"."Town"
+2026-03-28 13:24:57.416 +01:00 [INF] Dashboard filtered by Town: Bath
+2026-03-28 13:24:57.426 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@SelectedTown='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Premises" AS "p"
+LEFT JOIN "Inspections" AS "i" ON "p"."Id" = "i"."PremisesId"
+WHERE "p"."Town" = @SelectedTown
+ORDER BY "p"."Id"
+2026-03-28 13:24:57.429 +01:00 [INF] Dashboard loaded - Month: 3, Inspections: 8, Failed: 6, Overdue: 2
+2026-03-28 13:24:57.431 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-28 13:24:57.432 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-28 13:24:57.432 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-28 13:24:57.434 +01:00 [INF] Executed page /Dashboard in 27.9173ms
+2026-03-28 13:24:57.435 +01:00 [INF] Executed endpoint '/Dashboard'
+2026-03-28 13:24:57.436 +01:00 [INF] HTTP GET /Dashboard responded 200 in 32.4239 ms
+2026-03-28 13:24:57.437 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=Bath&selectedRiskRating= - 200 null text/html; charset=utf-8 36.5869ms
+2026-03-28 13:24:57.478 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - null null
+2026-03-28 13:24:57.478 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - null null
+2026-03-28 13:24:57.478 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - null null
+2026-03-28 13:24:57.479 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:24:57.479 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:24:57.480 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:24:57.480 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:24:57.480 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:24:57.485 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:57.491 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:57.483 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:57.489 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:57.481 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:57.487 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:57.494 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 14.732ms
+2026-03-28 13:24:57.495 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.6199ms
+2026-03-28 13:24:57.496 +01:00 [INF] Sending file. Request path: 'Library.MVC.r533r0ga00.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\huve81kccj-{0}-r533r0ga00-r533r0ga00.gz'
+2026-03-28 13:24:57.497 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:24:57.498 +01:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\xre84udqq5-{0}-b9sayid5wm-b9sayid5wm.gz'
+2026-03-28 13:24:57.499 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:24:57.501 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3g03db57xa-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-03-28 13:24:57.501 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:24:57.507 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:57.508 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:57.509 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:57.510 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:57.511 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:57.512 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:24:57.512 +01:00 [INF] HTTP GET /Library.MVC.r533r0ga00.styles.css responded 200 in 27.9962 ms
+2026-03-28 13:24:57.513 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 23.0190 ms
+2026-03-28 13:24:57.514 +01:00 [INF] HTTP GET /css/site.b9sayid5wm.css responded 200 in 31.4407 ms
+2026-03-28 13:24:57.515 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 26.4194 ms
+2026-03-28 13:24:57.515 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css responded 200 in 35.0528 ms
+2026-03-28 13:24:57.516 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 29.8679 ms
+2026-03-28 13:24:57.517 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - 200 1142 text/css 39.1084ms
+2026-03-28 13:24:57.519 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 39.2282ms
+2026-03-28 13:24:57.520 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - 200 700 text/css 42.4053ms
+2026-03-28 13:24:57.522 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 43.144ms
+2026-03-28 13:24:57.524 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - 200 232871 text/css 45.5924ms
+2026-03-28 13:24:57.525 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 46.1941ms
+2026-03-28 13:25:01.556 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=Bristol&selectedRiskRating= - null null
+2026-03-28 13:25:01.561 +01:00 [INF] Executing endpoint '/Dashboard'
+2026-03-28 13:25:01.562 +01:00 [INF] Route matched with {page = "/Dashboard", action = "", controller = "", area = ""}. Executing page /Dashboard
+2026-03-28 13:25:01.564 +01:00 [INF] Executing handler method Library.MVC.Pages.DashboardModel.OnGetAsync - ModelState is "Valid"
+2026-03-28 13:25:01.566 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays
+2026-03-28 13:25:01.568 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays AND "i"."Outcome" = 'Fail'
+2026-03-28 13:25:01.570 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@today='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @today AND "f"."Status" = 'Open'
+2026-03-28 13:25:01.572 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p0"."Town"
+FROM (
+    SELECT DISTINCT "p"."Town"
+    FROM "Premises" AS "p"
+) AS "p0"
+ORDER BY "p0"."Town"
+2026-03-28 13:25:01.574 +01:00 [INF] Dashboard filtered by Town: Bristol
+2026-03-28 13:25:01.576 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@SelectedTown='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Premises" AS "p"
+LEFT JOIN "Inspections" AS "i" ON "p"."Id" = "i"."PremisesId"
+WHERE "p"."Town" = @SelectedTown
+ORDER BY "p"."Id"
+2026-03-28 13:25:01.578 +01:00 [INF] Dashboard loaded - Month: 3, Inspections: 8, Failed: 6, Overdue: 2
+2026-03-28 13:25:01.579 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-28 13:25:01.580 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-28 13:25:01.581 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-28 13:25:01.582 +01:00 [INF] Executed page /Dashboard in 18.9524ms
+2026-03-28 13:25:01.584 +01:00 [INF] Executed endpoint '/Dashboard'
+2026-03-28 13:25:01.585 +01:00 [INF] HTTP GET /Dashboard responded 200 in 25.1515 ms
+2026-03-28 13:25:01.586 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=Bristol&selectedRiskRating= - 200 null text/html; charset=utf-8 30.4814ms
+2026-03-28 13:25:01.637 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - null null
+2026-03-28 13:25:01.637 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - null null
+2026-03-28 13:25:01.637 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - null null
+2026-03-28 13:25:01.638 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:25:01.638 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:25:01.638 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:25:01.639 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:25:01.639 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:25:01.646 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:01.648 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:01.642 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:01.657 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:25:01.658 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3g03db57xa-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-03-28 13:25:01.650 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:01.640 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:01.654 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 15.6443ms
+2026-03-28 13:25:01.655 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.951ms
+2026-03-28 13:25:01.656 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:25:01.644 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:01.658 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:01.659 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:01.660 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:25:01.661 +01:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\xre84udqq5-{0}-b9sayid5wm-b9sayid5wm.gz'
+2026-03-28 13:25:01.667 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:01.669 +01:00 [INF] Sending file. Request path: 'Library.MVC.r533r0ga00.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\huve81kccj-{0}-r533r0ga00-r533r0ga00.gz'
+2026-03-28 13:25:01.669 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 21.6930 ms
+2026-03-28 13:25:01.670 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css responded 200 in 28.2122 ms
+2026-03-28 13:25:01.671 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:01.672 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:01.673 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 27.4161 ms
+2026-03-28 13:25:01.674 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:01.675 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 37.2419ms
+2026-03-28 13:25:01.677 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - 200 232871 text/css 39.6613ms
+2026-03-28 13:25:01.678 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 28.3624 ms
+2026-03-28 13:25:01.679 +01:00 [INF] HTTP GET /css/site.b9sayid5wm.css responded 200 in 38.7723 ms
+2026-03-28 13:25:01.680 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 42.187ms
+2026-03-28 13:25:01.681 +01:00 [INF] HTTP GET /Library.MVC.r533r0ga00.styles.css responded 200 in 37.0518 ms
+2026-03-28 13:25:01.687 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 49.1085ms
+2026-03-28 13:25:01.689 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - 200 700 text/css 51.6469ms
+2026-03-28 13:25:01.693 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - 200 1142 text/css 55.2716ms
+2026-03-28 13:25:04.413 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=Bristol&selectedRiskRating=High - null null
+2026-03-28 13:25:04.416 +01:00 [INF] Executing endpoint '/Dashboard'
+2026-03-28 13:25:04.417 +01:00 [INF] Route matched with {page = "/Dashboard", action = "", controller = "", area = ""}. Executing page /Dashboard
+2026-03-28 13:25:04.418 +01:00 [INF] Executing handler method Library.MVC.Pages.DashboardModel.OnGetAsync - ModelState is "Valid"
+2026-03-28 13:25:04.420 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays
+2026-03-28 13:25:04.422 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays AND "i"."Outcome" = 'Fail'
+2026-03-28 13:25:04.423 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@today='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @today AND "f"."Status" = 'Open'
+2026-03-28 13:25:04.426 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p0"."Town"
+FROM (
+    SELECT DISTINCT "p"."Town"
+    FROM "Premises" AS "p"
+) AS "p0"
+ORDER BY "p0"."Town"
+2026-03-28 13:25:04.428 +01:00 [INF] Dashboard filtered by Town: Bristol
+2026-03-28 13:25:04.429 +01:00 [INF] Dashboard filtered by RiskRating: High
+2026-03-28 13:25:04.430 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@SelectedTown='?' (Size = 7), @SelectedRiskRating='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Premises" AS "p"
+LEFT JOIN "Inspections" AS "i" ON "p"."Id" = "i"."PremisesId"
+WHERE "p"."Town" = @SelectedTown AND "p"."RiskRating" = @SelectedRiskRating
+ORDER BY "p"."Id"
+2026-03-28 13:25:04.433 +01:00 [INF] Dashboard loaded - Month: 3, Inspections: 8, Failed: 6, Overdue: 2
+2026-03-28 13:25:04.434 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-28 13:25:04.435 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-28 13:25:04.436 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-28 13:25:04.438 +01:00 [INF] Executed page /Dashboard in 19.5615ms
+2026-03-28 13:25:04.439 +01:00 [INF] Executed endpoint '/Dashboard'
+2026-03-28 13:25:04.440 +01:00 [INF] HTTP GET /Dashboard responded 200 in 24.1039 ms
+2026-03-28 13:25:04.442 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=Bristol&selectedRiskRating=High - 200 null text/html; charset=utf-8 29.3304ms
+2026-03-28 13:25:04.489 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - null null
+2026-03-28 13:25:04.489 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - null null
+2026-03-28 13:25:04.490 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - null null
+2026-03-28 13:25:04.490 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:25:04.490 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:25:04.490 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:25:04.491 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:25:04.491 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:25:04.494 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:04.502 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:04.508 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.9693ms
+2026-03-28 13:25:04.500 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:04.496 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:04.492 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:04.506 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 15.2005ms
+2026-03-28 13:25:04.498 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:04.508 +01:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\xre84udqq5-{0}-b9sayid5wm-b9sayid5wm.gz'
+2026-03-28 13:25:04.508 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:25:04.513 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:25:04.513 +01:00 [INF] Sending file. Request path: 'Library.MVC.r533r0ga00.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\huve81kccj-{0}-r533r0ga00-r533r0ga00.gz'
+2026-03-28 13:25:04.515 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3g03db57xa-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-03-28 13:25:04.519 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:25:04.519 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:04.520 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:04.521 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:04.522 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:04.523 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:04.524 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:04.525 +01:00 [INF] HTTP GET /css/site.b9sayid5wm.css responded 200 in 31.4418 ms
+2026-03-28 13:25:04.526 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 24.6415 ms
+2026-03-28 13:25:04.527 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 27.3077 ms
+2026-03-28 13:25:04.528 +01:00 [INF] HTTP GET /Library.MVC.r533r0ga00.styles.css responded 200 in 31.9171 ms
+2026-03-28 13:25:04.529 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css responded 200 in 36.8361 ms
+2026-03-28 13:25:04.529 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 31.5396 ms
+2026-03-28 13:25:04.531 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - 200 700 text/css 41.3008ms
+2026-03-28 13:25:04.532 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 41.7873ms
+2026-03-28 13:25:04.534 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 43.6542ms
+2026-03-28 13:25:04.535 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - 200 1142 text/css 45.661ms
+2026-03-28 13:25:04.537 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - 200 232871 text/css 47.3773ms
+2026-03-28 13:25:04.538 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 48.3798ms
+2026-03-28 13:25:07.931 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=Bath&selectedRiskRating=High - null null
+2026-03-28 13:25:07.934 +01:00 [INF] Executing endpoint '/Dashboard'
+2026-03-28 13:25:07.935 +01:00 [INF] Route matched with {page = "/Dashboard", action = "", controller = "", area = ""}. Executing page /Dashboard
+2026-03-28 13:25:07.936 +01:00 [INF] Executing handler method Library.MVC.Pages.DashboardModel.OnGetAsync - ModelState is "Valid"
+2026-03-28 13:25:07.938 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays
+2026-03-28 13:25:07.940 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays AND "i"."Outcome" = 'Fail'
+2026-03-28 13:25:07.942 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@today='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @today AND "f"."Status" = 'Open'
+2026-03-28 13:25:07.945 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p0"."Town"
+FROM (
+    SELECT DISTINCT "p"."Town"
+    FROM "Premises" AS "p"
+) AS "p0"
+ORDER BY "p0"."Town"
+2026-03-28 13:25:07.947 +01:00 [INF] Dashboard filtered by Town: Bath
+2026-03-28 13:25:07.947 +01:00 [INF] Dashboard filtered by RiskRating: High
+2026-03-28 13:25:07.948 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@SelectedTown='?' (Size = 4), @SelectedRiskRating='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Premises" AS "p"
+LEFT JOIN "Inspections" AS "i" ON "p"."Id" = "i"."PremisesId"
+WHERE "p"."Town" = @SelectedTown AND "p"."RiskRating" = @SelectedRiskRating
+ORDER BY "p"."Id"
+2026-03-28 13:25:07.950 +01:00 [INF] Dashboard loaded - Month: 3, Inspections: 8, Failed: 6, Overdue: 2
+2026-03-28 13:25:07.951 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-28 13:25:07.952 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-28 13:25:07.953 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-28 13:25:07.954 +01:00 [INF] Executed page /Dashboard in 18.4816ms
+2026-03-28 13:25:07.956 +01:00 [INF] Executed endpoint '/Dashboard'
+2026-03-28 13:25:07.957 +01:00 [INF] HTTP GET /Dashboard responded 200 in 22.8100 ms
+2026-03-28 13:25:07.958 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Dashboard?selectedTown=Bath&selectedRiskRating=High - 200 null text/html; charset=utf-8 27.5152ms
+2026-03-28 13:25:08.005 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - null null
+2026-03-28 13:25:08.005 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - null null
+2026-03-28 13:25:08.005 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - null null
+2026-03-28 13:25:08.005 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:25:08.006 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:25:08.006 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:25:08.006 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:25:08.007 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:25:08.012 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:08.016 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:08.014 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:08.018 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:08.010 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:08.008 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:08.021 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 14.941ms
+2026-03-28 13:25:08.023 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.2898ms
+2026-03-28 13:25:08.023 +01:00 [INF] Sending file. Request path: 'Library.MVC.r533r0ga00.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\huve81kccj-{0}-r533r0ga00-r533r0ga00.gz'
+2026-03-28 13:25:08.024 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:25:08.025 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:25:08.025 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:25:08.026 +01:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\xre84udqq5-{0}-b9sayid5wm-b9sayid5wm.gz'
+2026-03-28 13:25:08.029 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3g03db57xa-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-03-28 13:25:08.033 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:08.034 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:08.036 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:08.037 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:08.038 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:08.039 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:25:08.039 +01:00 [INF] HTTP GET /Library.MVC.r533r0ga00.styles.css responded 200 in 27.6099 ms
+2026-03-28 13:25:08.040 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 24.2266 ms
+2026-03-28 13:25:08.041 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 26.8000 ms
+2026-03-28 13:25:08.041 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 23.9149 ms
+2026-03-28 13:25:08.042 +01:00 [INF] HTTP GET /css/site.b9sayid5wm.css responded 200 in 33.0888 ms
+2026-03-28 13:25:08.043 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css responded 200 in 35.7377 ms
+2026-03-28 13:25:08.045 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - 200 1142 text/css 39.5244ms
+2026-03-28 13:25:08.046 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 40.4459ms
+2026-03-28 13:25:08.048 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 42.3131ms
+2026-03-28 13:25:08.049 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 43.1871ms
+2026-03-28 13:25:08.051 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - 200 700 text/css 45.581ms
+2026-03-28 13:25:08.052 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - 200 232871 text/css 46.9532ms
+2026-03-28 13:25:18.247 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Admin/Roles - null null
+2026-03-28 13:25:18.252 +01:00 [INF] Executing endpoint 'Library.MVC.Areas.Admin.Controllers.RolesController.Index (Library.MVC)'
+2026-03-28 13:25:18.262 +01:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Roles", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Library.MVC.Areas.Admin.Controllers.RolesController (Library.MVC).
+2026-03-28 13:25:18.270 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+2026-03-28 13:25:18.273 +01:00 [INF] Roles index loaded. Total roles: 3
+2026-03-28 13:25:18.275 +01:00 [INF] Executing ViewResult, running view Index.
+2026-03-28 13:25:18.288 +01:00 [INF] Executed ViewResult - view Index executed in 13.2125ms.
+2026-03-28 13:25:18.289 +01:00 [INF] Executed action Library.MVC.Areas.Admin.Controllers.RolesController.Index (Library.MVC) in 24.8378ms
+2026-03-28 13:25:18.290 +01:00 [INF] Executed endpoint 'Library.MVC.Areas.Admin.Controllers.RolesController.Index (Library.MVC)'
+2026-03-28 13:25:18.291 +01:00 [INF] HTTP GET /Admin/Roles responded 200 in 41.0349 ms
+2026-03-28 13:25:18.293 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Admin/Roles - 200 null text/html; charset=utf-8 45.2799ms
+2026-03-28 13:25:18.350 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:25:18.350 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:25:18.354 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.7455ms
+2026-03-28 13:25:18.356 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.1742ms
+2026-03-28 13:25:23.455 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Inspections - null null
+2026-03-28 13:25:23.458 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.InspectionsController.Index (Library.MVC)'
+2026-03-28 13:25:23.465 +01:00 [INF] Route matched with {action = "Index", controller = "Inspections", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Library.MVC.Controllers.InspectionsController (Library.MVC).
+2026-03-28 13:25:23.490 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score", "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "f"."Id", "f"."ClosedDate", "f"."DueDate", "f"."InspectionId", "f"."Status"
+FROM "Inspections" AS "i"
+INNER JOIN "Premises" AS "p" ON "i"."PremisesId" = "p"."Id"
+LEFT JOIN "FollowUps" AS "f" ON "i"."Id" = "f"."InspectionId"
+ORDER BY "i"."Id", "p"."Id"
+2026-03-28 13:25:23.505 +01:00 [INF] Inspections list viewed. Total: 25
+2026-03-28 13:25:23.506 +01:00 [INF] Executing ViewResult, running view Index.
+2026-03-28 13:25:23.524 +01:00 [INF] Executed ViewResult - view Index executed in 17.8972ms.
+2026-03-28 13:25:23.525 +01:00 [INF] Executed action Library.MVC.Controllers.InspectionsController.Index (Library.MVC) in 58.1529ms
+2026-03-28 13:25:23.526 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.InspectionsController.Index (Library.MVC)'
+2026-03-28 13:25:23.527 +01:00 [INF] HTTP GET /Inspections responded 200 in 69.9966 ms
+2026-03-28 13:25:23.529 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Inspections - 200 null text/html; charset=utf-8 74.3958ms
+2026-03-28 13:25:23.569 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:25:23.569 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:25:23.573 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.2209ms
+2026-03-28 13:25:23.574 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.5285ms
+2026-03-28 13:25:31.288 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Inspections/Edit/26 - null null
+2026-03-28 13:25:31.291 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.InspectionsController.Edit (Library.MVC)'
+2026-03-28 13:25:31.298 +01:00 [INF] Route matched with {action = "Edit", controller = "Inspections", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(System.Nullable`1[System.Int32]) on controller Library.MVC.Controllers.InspectionsController (Library.MVC).
+2026-03-28 13:25:31.326 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Inspections" AS "i"
+WHERE "i"."Id" = @p
+LIMIT 1
+2026-03-28 13:25:31.348 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town"
+FROM "Premises" AS "p"
+2026-03-28 13:25:31.368 +01:00 [INF] Executing ViewResult, running view Edit.
+2026-03-28 13:25:31.418 +01:00 [INF] Executed ViewResult - view Edit executed in 50.9786ms.
+2026-03-28 13:25:31.419 +01:00 [INF] Executed action Library.MVC.Controllers.InspectionsController.Edit (Library.MVC) in 120.0112ms
+2026-03-28 13:25:31.421 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.InspectionsController.Edit (Library.MVC)'
+2026-03-28 13:25:31.421 +01:00 [INF] HTTP GET /Inspections/Edit/26 responded 200 in 131.0198 ms
+2026-03-28 13:25:31.423 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Inspections/Edit/26 - 200 null text/html; charset=utf-8 135.1499ms
+2026-03-28 13:25:31.487 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2026-03-28 13:25:31.487 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - null null
+2026-03-28 13:25:31.487 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:25:31.487 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:25:31.495 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 8.4708ms
+2026-03-28 13:25:31.497 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.3332ms
+2026-03-28 13:25:31.525 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js'
+2026-03-28 13:25:31.526 +01:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js responded 200 in 35.2953 ms
+2026-03-28 13:25:31.528 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - 200 5824 text/javascript 41.1ms
+2026-03-28 13:25:31.552 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2026-03-28 13:25:31.553 +01:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js responded 200 in 64.7787 ms
+2026-03-28 13:25:31.555 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery-validation/dist/jquery.validate.min.js - 200 25308 text/javascript 68.8638ms
+2026-03-28 13:25:31.592 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - null null
+2026-03-28 13:25:31.592 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2026-03-28 13:25:31.595 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js'
+2026-03-28 13:25:31.596 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2026-03-28 13:25:31.597 +01:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js responded 200 in 3.0224 ms
+2026-03-28 13:25:31.598 +01:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js responded 200 in 2.0526 ms
+2026-03-28 13:25:31.599 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - 200 5824 text/javascript 7.5365ms
+2026-03-28 13:25:31.601 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery-validation/dist/jquery.validate.min.js - 200 25308 text/javascript 9.122ms
+2026-03-28 13:25:37.366 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Inspections/Edit/26 - null null
+2026-03-28 13:25:37.370 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.InspectionsController.Edit (Library.MVC)'
+2026-03-28 13:25:37.371 +01:00 [INF] Route matched with {action = "Edit", controller = "Inspections", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(System.Nullable`1[System.Int32]) on controller Library.MVC.Controllers.InspectionsController (Library.MVC).
+2026-03-28 13:25:37.374 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Inspections" AS "i"
+WHERE "i"."Id" = @p
+LIMIT 1
+2026-03-28 13:25:37.376 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town"
+FROM "Premises" AS "p"
+2026-03-28 13:25:37.378 +01:00 [INF] Executing ViewResult, running view Edit.
+2026-03-28 13:25:37.380 +01:00 [INF] Executed ViewResult - view Edit executed in 2.5575ms.
+2026-03-28 13:25:37.382 +01:00 [INF] Executed action Library.MVC.Controllers.InspectionsController.Edit (Library.MVC) in 8.5185ms
+2026-03-28 13:25:37.383 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.InspectionsController.Edit (Library.MVC)'
+2026-03-28 13:25:37.384 +01:00 [INF] HTTP GET /Inspections/Edit/26 responded 200 in 14.3487 ms
+2026-03-28 13:25:37.385 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Inspections/Edit/26 - 200 null text/html; charset=utf-8 19.3372ms
+2026-03-28 13:25:37.424 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:25:37.424 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:25:37.428 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.2173ms
+2026-03-28 13:25:37.429 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.3027ms
+2026-03-28 13:25:39.876 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Inspections/Edit/26 - null null
+2026-03-28 13:25:39.879 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.InspectionsController.Edit (Library.MVC)'
+2026-03-28 13:25:39.880 +01:00 [INF] Route matched with {action = "Edit", controller = "Inspections", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(System.Nullable`1[System.Int32]) on controller Library.MVC.Controllers.InspectionsController (Library.MVC).
+2026-03-28 13:25:39.883 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Inspections" AS "i"
+WHERE "i"."Id" = @p
+LIMIT 1
+2026-03-28 13:25:39.885 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town"
+FROM "Premises" AS "p"
+2026-03-28 13:25:39.887 +01:00 [INF] Executing ViewResult, running view Edit.
+2026-03-28 13:25:39.890 +01:00 [INF] Executed ViewResult - view Edit executed in 3.4562ms.
+2026-03-28 13:25:39.892 +01:00 [INF] Executed action Library.MVC.Controllers.InspectionsController.Edit (Library.MVC) in 9.5922ms
+2026-03-28 13:25:39.893 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.InspectionsController.Edit (Library.MVC)'
+2026-03-28 13:25:39.893 +01:00 [INF] HTTP GET /Inspections/Edit/26 responded 200 in 14.7524 ms
+2026-03-28 13:25:39.895 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Inspections/Edit/26 - 200 null text/html; charset=utf-8 19.4726ms
+2026-03-28 13:25:39.936 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:25:39.936 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:25:39.940 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.2488ms
+2026-03-28 13:25:39.942 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.5525ms
+2026-03-28 13:25:56.318 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Premises - null null
+2026-03-28 13:25:56.321 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.PremisesController.Index (Library.MVC)'
+2026-03-28 13:25:56.327 +01:00 [INF] Route matched with {action = "Index", controller = "Premises", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Library.MVC.Controllers.PremisesController (Library.MVC).
+2026-03-28 13:25:56.330 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Premises" AS "p"
+LEFT JOIN "Inspections" AS "i" ON "p"."Id" = "i"."PremisesId"
+ORDER BY "p"."Id"
+2026-03-28 13:25:56.332 +01:00 [INF] Premises list viewed. Total: 12
+2026-03-28 13:25:56.333 +01:00 [INF] Executing ViewResult, running view Index.
+2026-03-28 13:25:56.345 +01:00 [INF] Executed ViewResult - view Index executed in 12.0873ms.
+2026-03-28 13:25:56.346 +01:00 [INF] Executed action Library.MVC.Controllers.PremisesController.Index (Library.MVC) in 17.5008ms
+2026-03-28 13:25:56.347 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.PremisesController.Index (Library.MVC)'
+2026-03-28 13:25:56.348 +01:00 [INF] HTTP GET /Premises responded 200 in 27.0915 ms
+2026-03-28 13:25:56.350 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Premises - 200 null text/html; charset=utf-8 31.8603ms
+2026-03-28 13:25:56.394 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:25:56.394 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:25:56.399 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.6131ms
+2026-03-28 13:25:56.400 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.7443ms
+2026-03-28 13:25:58.654 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Inspections - null null
+2026-03-28 13:25:58.657 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.InspectionsController.Index (Library.MVC)'
+2026-03-28 13:25:58.658 +01:00 [INF] Route matched with {action = "Index", controller = "Inspections", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Library.MVC.Controllers.InspectionsController (Library.MVC).
+2026-03-28 13:25:58.661 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score", "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "f"."Id", "f"."ClosedDate", "f"."DueDate", "f"."InspectionId", "f"."Status"
+FROM "Inspections" AS "i"
+INNER JOIN "Premises" AS "p" ON "i"."PremisesId" = "p"."Id"
+LEFT JOIN "FollowUps" AS "f" ON "i"."Id" = "f"."InspectionId"
+ORDER BY "i"."Id", "p"."Id"
+2026-03-28 13:25:58.664 +01:00 [INF] Inspections list viewed. Total: 25
+2026-03-28 13:25:58.665 +01:00 [INF] Executing ViewResult, running view Index.
+2026-03-28 13:25:58.668 +01:00 [INF] Executed ViewResult - view Index executed in 3.5435ms.
+2026-03-28 13:25:58.670 +01:00 [INF] Executed action Library.MVC.Controllers.InspectionsController.Index (Library.MVC) in 9.4581ms
+2026-03-28 13:25:58.671 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.InspectionsController.Index (Library.MVC)'
+2026-03-28 13:25:58.672 +01:00 [INF] HTTP GET /Inspections responded 200 in 14.8156 ms
+2026-03-28 13:25:58.674 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Inspections - 200 null text/html; charset=utf-8 19.929ms
+2026-03-28 13:25:58.856 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:25:58.856 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:25:58.861 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.8454ms
+2026-03-28 13:25:58.863 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.1941ms
+2026-03-28 13:26:01.590 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Inspections/Edit/3 - null null
+2026-03-28 13:26:01.593 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.InspectionsController.Edit (Library.MVC)'
+2026-03-28 13:26:01.594 +01:00 [INF] Route matched with {action = "Edit", controller = "Inspections", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Edit(System.Nullable`1[System.Int32]) on controller Library.MVC.Controllers.InspectionsController (Library.MVC).
+2026-03-28 13:26:01.596 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Inspections" AS "i"
+WHERE "i"."Id" = @p
+LIMIT 1
+2026-03-28 13:26:01.598 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town"
+FROM "Premises" AS "p"
+2026-03-28 13:26:01.600 +01:00 [INF] Executing ViewResult, running view Edit.
+2026-03-28 13:26:01.602 +01:00 [INF] Executed ViewResult - view Edit executed in 2.2609ms.
+2026-03-28 13:26:01.603 +01:00 [INF] Executed action Library.MVC.Controllers.InspectionsController.Edit (Library.MVC) in 7.5607ms
+2026-03-28 13:26:01.604 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.InspectionsController.Edit (Library.MVC)'
+2026-03-28 13:26:01.605 +01:00 [INF] HTTP GET /Inspections/Edit/3 responded 200 in 12.4429 ms
+2026-03-28 13:26:01.607 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Inspections/Edit/3 - 200 null text/html; charset=utf-8 16.6596ms
+2026-03-28 13:26:01.650 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:26:01.651 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:26:01.655 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.5326ms
+2026-03-28 13:26:01.657 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.0586ms
+2026-03-28 13:26:06.142 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Inspections - null null
+2026-03-28 13:26:06.145 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.InspectionsController.Index (Library.MVC)'
+2026-03-28 13:26:06.146 +01:00 [INF] Route matched with {action = "Index", controller = "Inspections", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Library.MVC.Controllers.InspectionsController (Library.MVC).
+2026-03-28 13:26:06.148 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score", "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "f"."Id", "f"."ClosedDate", "f"."DueDate", "f"."InspectionId", "f"."Status"
+FROM "Inspections" AS "i"
+INNER JOIN "Premises" AS "p" ON "i"."PremisesId" = "p"."Id"
+LEFT JOIN "FollowUps" AS "f" ON "i"."Id" = "f"."InspectionId"
+ORDER BY "i"."Id", "p"."Id"
+2026-03-28 13:26:06.151 +01:00 [INF] Inspections list viewed. Total: 25
+2026-03-28 13:26:06.152 +01:00 [INF] Executing ViewResult, running view Index.
+2026-03-28 13:26:06.155 +01:00 [INF] Executed ViewResult - view Index executed in 2.9926ms.
+2026-03-28 13:26:06.156 +01:00 [INF] Executed action Library.MVC.Controllers.InspectionsController.Index (Library.MVC) in 7.8426ms
+2026-03-28 13:26:06.157 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.InspectionsController.Index (Library.MVC)'
+2026-03-28 13:26:06.158 +01:00 [INF] HTTP GET /Inspections responded 200 in 12.7480 ms
+2026-03-28 13:26:06.159 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Inspections - 200 null text/html; charset=utf-8 17.253ms
+2026-03-28 13:26:06.209 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:26:06.209 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:26:06.214 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.7586ms
+2026-03-28 13:26:06.215 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.9755ms
+2026-03-28 13:26:07.261 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Inspections/Details/25 - null null
+2026-03-28 13:26:07.264 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.InspectionsController.Details (Library.MVC)'
+2026-03-28 13:26:07.271 +01:00 [INF] Route matched with {action = "Details", controller = "Inspections", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(System.Nullable`1[System.Int32]) on controller Library.MVC.Controllers.InspectionsController (Library.MVC).
+2026-03-28 13:26:07.291 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."InspectionDate", "s"."Notes", "s"."Outcome", "s"."PremisesId", "s"."Score", "s"."Id0", "s"."Address", "s"."Name", "s"."RiskRating", "s"."Town", "f"."Id", "f"."ClosedDate", "f"."DueDate", "f"."InspectionId", "f"."Status"
+FROM (
+    SELECT "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score", "p"."Id" AS "Id0", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town"
+    FROM "Inspections" AS "i"
+    INNER JOIN "Premises" AS "p" ON "i"."PremisesId" = "p"."Id"
+    WHERE "i"."Id" = @id
+    LIMIT 1
+) AS "s"
+LEFT JOIN "FollowUps" AS "f" ON "s"."Id" = "f"."InspectionId"
+ORDER BY "s"."Id", "s"."Id0"
+2026-03-28 13:26:07.296 +01:00 [INF] Executing ViewResult, running view Details.
+2026-03-28 13:26:07.305 +01:00 [INF] Executed ViewResult - view Details executed in 10.2454ms.
+2026-03-28 13:26:07.307 +01:00 [INF] Executed action Library.MVC.Controllers.InspectionsController.Details (Library.MVC) in 33.8198ms
+2026-03-28 13:26:07.308 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.InspectionsController.Details (Library.MVC)'
+2026-03-28 13:26:07.309 +01:00 [INF] HTTP GET /Inspections/Details/25 responded 200 in 44.5693 ms
+2026-03-28 13:26:07.310 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Inspections/Details/25 - 200 null text/html; charset=utf-8 49.7987ms
+2026-03-28 13:26:07.363 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:26:07.363 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:26:07.368 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.3474ms
+2026-03-28 13:26:07.369 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.1869ms
+2026-03-28 13:26:11.416 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/FollowUps/Create?inspectionId=25 - null null
+2026-03-28 13:26:11.421 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.FollowUpsController.Create (Library.MVC)'
+2026-03-28 13:26:11.428 +01:00 [INF] Route matched with {action = "Create", controller = "FollowUps", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create() on controller Library.MVC.Controllers.FollowUpsController (Library.MVC).
+2026-03-28 13:26:11.437 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score", "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town"
+FROM "Inspections" AS "i"
+INNER JOIN "Premises" AS "p" ON "i"."PremisesId" = "p"."Id"
+2026-03-28 13:26:11.442 +01:00 [INF] Executing ViewResult, running view Create.
+2026-03-28 13:26:11.471 +01:00 [INF] Executed ViewResult - view Create executed in 29.3023ms.
+2026-03-28 13:26:11.472 +01:00 [INF] Executed action Library.MVC.Controllers.FollowUpsController.Create (Library.MVC) in 42.3487ms
+2026-03-28 13:26:11.474 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.FollowUpsController.Create (Library.MVC)'
+2026-03-28 13:26:11.474 +01:00 [INF] HTTP GET /FollowUps/Create responded 200 in 53.4505 ms
+2026-03-28 13:26:11.476 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/FollowUps/Create?inspectionId=25 - 200 null text/html; charset=utf-8 59.7273ms
+2026-03-28 13:26:11.511 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:26:11.511 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:26:11.515 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.3028ms
+2026-03-28 13:26:11.516 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.2333ms
+2026-03-28 13:26:30.993 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Admin/Roles - null null
+2026-03-28 13:26:30.997 +01:00 [INF] Executing endpoint 'Library.MVC.Areas.Admin.Controllers.RolesController.Index (Library.MVC)'
+2026-03-28 13:26:30.998 +01:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Roles", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Library.MVC.Areas.Admin.Controllers.RolesController (Library.MVC).
+2026-03-28 13:26:30.999 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+2026-03-28 13:26:31.001 +01:00 [INF] Roles index loaded. Total roles: 3
+2026-03-28 13:26:31.002 +01:00 [INF] Executing ViewResult, running view Index.
+2026-03-28 13:26:31.004 +01:00 [INF] Executed ViewResult - view Index executed in 2.1441ms.
+2026-03-28 13:26:31.005 +01:00 [INF] Executed action Library.MVC.Areas.Admin.Controllers.RolesController.Index (Library.MVC) in 6.422ms
+2026-03-28 13:26:31.007 +01:00 [INF] Executed endpoint 'Library.MVC.Areas.Admin.Controllers.RolesController.Index (Library.MVC)'
+2026-03-28 13:26:31.008 +01:00 [INF] HTTP GET /Admin/Roles responded 200 in 11.5336 ms
+2026-03-28 13:26:31.009 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Admin/Roles - 200 null text/html; charset=utf-8 16.1576ms
+2026-03-28 13:26:31.050 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:26:31.050 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:26:31.055 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.8179ms
+2026-03-28 13:26:31.056 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.6758ms
+2026-03-28 13:26:34.174 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Dashboard - null null
+2026-03-28 13:26:34.177 +01:00 [INF] Executing endpoint '/Dashboard'
+2026-03-28 13:26:34.178 +01:00 [INF] Route matched with {page = "/Dashboard", action = "", controller = "", area = ""}. Executing page /Dashboard
+2026-03-28 13:26:34.179 +01:00 [INF] Executing handler method Library.MVC.Pages.DashboardModel.OnGetAsync - ModelState is "Valid"
+2026-03-28 13:26:34.180 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays
+2026-03-28 13:26:34.183 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays AND "i"."Outcome" = 'Fail'
+2026-03-28 13:26:34.185 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@today='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @today AND "f"."Status" = 'Open'
+2026-03-28 13:26:34.187 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p0"."Town"
+FROM (
+    SELECT DISTINCT "p"."Town"
+    FROM "Premises" AS "p"
+) AS "p0"
+ORDER BY "p0"."Town"
+2026-03-28 13:26:34.189 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Premises" AS "p"
+LEFT JOIN "Inspections" AS "i" ON "p"."Id" = "i"."PremisesId"
+ORDER BY "p"."Id"
+2026-03-28 13:26:34.191 +01:00 [INF] Dashboard loaded - Month: 3, Inspections: 8, Failed: 6, Overdue: 2
+2026-03-28 13:26:34.192 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-28 13:26:34.193 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-28 13:26:34.194 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-28 13:26:34.196 +01:00 [INF] Executed page /Dashboard in 16.8406ms
+2026-03-28 13:26:34.197 +01:00 [INF] Executed endpoint '/Dashboard'
+2026-03-28 13:26:34.198 +01:00 [INF] HTTP GET /Dashboard responded 200 in 21.3408 ms
+2026-03-28 13:26:34.200 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Dashboard - 200 null text/html; charset=utf-8 25.7497ms
+2026-03-28 13:26:34.258 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - null null
+2026-03-28 13:26:34.259 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:26:34.258 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - null null
+2026-03-28 13:26:34.258 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - null null
+2026-03-28 13:26:34.259 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:26:34.294 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:34.262 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:26:34.296 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:34.298 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:34.300 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:34.310 +01:00 [INF] Sending file. Request path: 'Library.MVC.r533r0ga00.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\huve81kccj-{0}-r533r0ga00-r533r0ga00.gz'
+2026-03-28 13:26:34.302 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:34.308 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:34.265 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:26:34.266 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:26:34.314 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:34.313 +01:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\xre84udqq5-{0}-b9sayid5wm-b9sayid5wm.gz'
+2026-03-28 13:26:34.316 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:26:34.306 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3g03db57xa-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-03-28 13:26:34.310 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:26:34.315 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:26:34.320 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 53.525ms
+2026-03-28 13:26:34.320 +01:00 [INF] HTTP GET /Library.MVC.r533r0ga00.styles.css responded 200 in 22.7809 ms
+2026-03-28 13:26:34.320 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.0657ms
+2026-03-28 13:26:34.321 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:34.323 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:34.324 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:34.325 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:34.326 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:34.330 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - 200 1142 text/css 71.6349ms
+2026-03-28 13:26:34.333 +01:00 [INF] HTTP GET /css/site.b9sayid5wm.css responded 200 in 32.9962 ms
+2026-03-28 13:26:34.333 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 27.3376 ms
+2026-03-28 13:26:34.334 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css responded 200 in 69.9489 ms
+2026-03-28 13:26:34.335 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 39.2613 ms
+2026-03-28 13:26:34.336 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 34.2836 ms
+2026-03-28 13:26:34.339 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - 200 700 text/css 81.0649ms
+2026-03-28 13:26:34.340 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 78.5715ms
+2026-03-28 13:26:34.342 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - 200 232871 text/css 84.2494ms
+2026-03-28 13:26:34.343 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 84.3657ms
+2026-03-28 13:26:34.345 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 85.861ms
+2026-03-28 13:26:51.382 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Dashboard - null null
+2026-03-28 13:26:51.385 +01:00 [INF] Executing endpoint '/Dashboard'
+2026-03-28 13:26:51.386 +01:00 [INF] Route matched with {page = "/Dashboard", action = "", controller = "", area = ""}. Executing page /Dashboard
+2026-03-28 13:26:51.387 +01:00 [INF] Executing handler method Library.MVC.Pages.DashboardModel.OnGetAsync - ModelState is "Valid"
+2026-03-28 13:26:51.389 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays
+2026-03-28 13:26:51.391 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@monthStart='?' (DbType = DateTime), @AddDays='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."InspectionDate" >= @monthStart AND "i"."InspectionDate" <= @AddDays AND "i"."Outcome" = 'Fail'
+2026-03-28 13:26:51.393 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@today='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @today AND "f"."Status" = 'Open'
+2026-03-28 13:26:51.394 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p0"."Town"
+FROM (
+    SELECT DISTINCT "p"."Town"
+    FROM "Premises" AS "p"
+) AS "p0"
+ORDER BY "p0"."Town"
+2026-03-28 13:26:51.396 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town", "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score"
+FROM "Premises" AS "p"
+LEFT JOIN "Inspections" AS "i" ON "p"."Id" = "i"."PremisesId"
+ORDER BY "p"."Id"
+2026-03-28 13:26:51.398 +01:00 [INF] Dashboard loaded - Month: 3, Inspections: 8, Failed: 6, Overdue: 2
+2026-03-28 13:26:51.399 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-28 13:26:51.400 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-28 13:26:51.400 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-28 13:26:51.402 +01:00 [INF] Executed page /Dashboard in 15.4114ms
+2026-03-28 13:26:51.403 +01:00 [INF] Executed endpoint '/Dashboard'
+2026-03-28 13:26:51.404 +01:00 [INF] HTTP GET /Dashboard responded 200 in 19.5052 ms
+2026-03-28 13:26:51.406 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Dashboard - 200 null text/html; charset=utf-8 23.9285ms
+2026-03-28 13:26:51.455 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - null null
+2026-03-28 13:26:51.455 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - null null
+2026-03-28 13:26:51.455 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - null null
+2026-03-28 13:26:51.456 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - null null
+2026-03-28 13:26:51.456 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - null null
+2026-03-28 13:26:51.456 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - null null
+2026-03-28 13:26:51.456 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:26:51.457 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:26:51.465 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:51.468 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:51.460 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:51.463 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:51.462 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:51.458 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:51.472 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 15.178ms
+2026-03-28 13:26:51.472 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.1809ms
+2026-03-28 13:26:51.474 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3b4n2scea4-{0}-493y06b0oq-493y06b0oq.gz'
+2026-03-28 13:26:51.474 +01:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\gbj7nuoofk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-03-28 13:26:51.475 +01:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\xre84udqq5-{0}-b9sayid5wm-b9sayid5wm.gz'
+2026-03-28 13:26:51.476 +01:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.o1o13a6vjx.js'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\zxtep2blmd-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-03-28 13:26:51.477 +01:00 [INF] Sending file. Request path: 'Library.MVC.r533r0ga00.styles.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\huve81kccj-{0}-r533r0ga00-r533r0ga00.gz'
+2026-03-28 13:26:51.479 +01:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css'. Physical path: 'C:\Users\livet\Downloads\AAAAAA\Library.MVC\obj\Debug\net10.0\compressed\3g03db57xa-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-03-28 13:26:51.484 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:51.485 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:51.486 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:51.487 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:51.488 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:51.489 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-03-28 13:26:51.490 +01:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js responded 200 in 25.2366 ms
+2026-03-28 13:26:51.491 +01:00 [INF] HTTP GET /js/site.xtxxf3hu2r.js responded 200 in 23.7105 ms
+2026-03-28 13:26:51.492 +01:00 [INF] HTTP GET /css/site.b9sayid5wm.css responded 200 in 32.4188 ms
+2026-03-28 13:26:51.493 +01:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.o1o13a6vjx.js responded 200 in 29.5482 ms
+2026-03-28 13:26:51.494 +01:00 [INF] HTTP GET /Library.MVC.r533r0ga00.styles.css responded 200 in 31.9981 ms
+2026-03-28 13:26:51.494 +01:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css responded 200 in 36.6188 ms
+2026-03-28 13:26:51.496 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js - 200 80764 text/javascript 39.8754ms
+2026-03-28 13:26:51.497 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/js/site.xtxxf3hu2r.js - 200 264 text/javascript 41.3145ms
+2026-03-28 13:26:51.499 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/css/site.b9sayid5wm.css - 200 700 text/css 43.767ms
+2026-03-28 13:26:51.500 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/jquery/dist/jquery.min.o1o13a6vjx.js - 200 87576 text/javascript 44.7244ms
+2026-03-28 13:26:51.502 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Library.MVC.r533r0ga00.styles.css - 200 1142 text/css 46.4076ms
+2026-03-28 13:26:51.503 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css - 200 232871 text/css 48.0398ms
+2026-03-28 13:26:55.710 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/ - null null
+2026-03-28 13:26:55.713 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.HomeController.Index (Library.MVC)'
+2026-03-28 13:26:55.714 +01:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Library.MVC.Controllers.HomeController (Library.MVC).
+2026-03-28 13:26:55.716 +01:00 [INF] Executing ViewResult, running view Index.
+2026-03-28 13:26:55.718 +01:00 [INF] Executed ViewResult - view Index executed in 2.4543ms.
+2026-03-28 13:26:55.720 +01:00 [INF] Executed action Library.MVC.Controllers.HomeController.Index (Library.MVC) in 4.0699ms
+2026-03-28 13:26:55.721 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.HomeController.Index (Library.MVC)'
+2026-03-28 13:26:55.722 +01:00 [INF] HTTP GET / responded 200 in 9.5928 ms
+2026-03-28 13:26:55.724 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/ - 200 null text/html; charset=utf-8 14.9122ms
+2026-03-28 13:26:55.772 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:26:55.772 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:26:55.776 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.8655ms
+2026-03-28 13:26:55.777 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.6432ms
+2026-03-28 13:26:56.317 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Home/Privacy - null null
+2026-03-28 13:26:56.320 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.HomeController.Privacy (Library.MVC)'
+2026-03-28 13:26:56.322 +01:00 [INF] Route matched with {action = "Privacy", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller Library.MVC.Controllers.HomeController (Library.MVC).
+2026-03-28 13:26:56.325 +01:00 [INF] Executing ViewResult, running view Privacy.
+2026-03-28 13:26:56.331 +01:00 [INF] Executed ViewResult - view Privacy executed in 6.6655ms.
+2026-03-28 13:26:56.332 +01:00 [INF] Executed action Library.MVC.Controllers.HomeController.Privacy (Library.MVC) in 8.1652ms
+2026-03-28 13:26:56.333 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.HomeController.Privacy (Library.MVC)'
+2026-03-28 13:26:56.334 +01:00 [INF] HTTP GET /Home/Privacy responded 200 in 14.2743 ms
+2026-03-28 13:26:56.336 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Home/Privacy - 200 null text/html; charset=utf-8 19.447ms
+2026-03-28 13:26:56.389 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:26:56.389 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:26:56.394 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.6966ms
+2026-03-28 13:26:56.395 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.0023ms
+2026-03-28 13:26:58.538 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/FollowUps - null null
+2026-03-28 13:26:58.542 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.FollowUpsController.Index (Library.MVC)'
+2026-03-28 13:26:58.549 +01:00 [INF] Route matched with {action = "Index", controller = "FollowUps", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Library.MVC.Controllers.FollowUpsController (Library.MVC).
+2026-03-28 13:26:58.564 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."ClosedDate", "f"."DueDate", "f"."InspectionId", "f"."Status", "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score", "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town"
+FROM "FollowUps" AS "f"
+INNER JOIN "Inspections" AS "i" ON "f"."InspectionId" = "i"."Id"
+INNER JOIN "Premises" AS "p" ON "i"."PremisesId" = "p"."Id"
+2026-03-28 13:26:58.567 +01:00 [INF] Follow-ups list viewed. Total: 10
+2026-03-28 13:26:58.569 +01:00 [INF] Executing ViewResult, running view Index.
+2026-03-28 13:26:58.580 +01:00 [INF] Executed ViewResult - view Index executed in 11.9357ms.
+2026-03-28 13:26:58.581 +01:00 [INF] Executed action Library.MVC.Controllers.FollowUpsController.Index (Library.MVC) in 30.6037ms
+2026-03-28 13:26:58.582 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.FollowUpsController.Index (Library.MVC)'
+2026-03-28 13:26:58.583 +01:00 [INF] HTTP GET /FollowUps responded 200 in 41.3260 ms
+2026-03-28 13:26:58.584 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/FollowUps - 200 null text/html; charset=utf-8 46.3279ms
+2026-03-28 13:26:58.732 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:26:58.732 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:26:58.734 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 2.3773ms
+2026-03-28 13:26:58.740 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.7797ms
+2026-03-28 13:27:05.840 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/Inspections/Details/4 - null null
+2026-03-28 13:27:05.843 +01:00 [INF] Executing endpoint 'Library.MVC.Controllers.InspectionsController.Details (Library.MVC)'
+2026-03-28 13:27:05.844 +01:00 [INF] Route matched with {action = "Details", controller = "Inspections", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(System.Nullable`1[System.Int32]) on controller Library.MVC.Controllers.InspectionsController (Library.MVC).
+2026-03-28 13:27:05.846 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."InspectionDate", "s"."Notes", "s"."Outcome", "s"."PremisesId", "s"."Score", "s"."Id0", "s"."Address", "s"."Name", "s"."RiskRating", "s"."Town", "f"."Id", "f"."ClosedDate", "f"."DueDate", "f"."InspectionId", "f"."Status"
+FROM (
+    SELECT "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score", "p"."Id" AS "Id0", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town"
+    FROM "Inspections" AS "i"
+    INNER JOIN "Premises" AS "p" ON "i"."PremisesId" = "p"."Id"
+    WHERE "i"."Id" = @id
+    LIMIT 1
+) AS "s"
+LEFT JOIN "FollowUps" AS "f" ON "s"."Id" = "f"."InspectionId"
+ORDER BY "s"."Id", "s"."Id0"
+2026-03-28 13:27:05.848 +01:00 [INF] Executing ViewResult, running view Details.
+2026-03-28 13:27:05.851 +01:00 [INF] Executed ViewResult - view Details executed in 3.2435ms.
+2026-03-28 13:27:05.852 +01:00 [INF] Executed action Library.MVC.Controllers.InspectionsController.Details (Library.MVC) in 7.2814ms
+2026-03-28 13:27:05.854 +01:00 [INF] Executed endpoint 'Library.MVC.Controllers.InspectionsController.Details (Library.MVC)'
+2026-03-28 13:27:05.854 +01:00 [INF] HTTP GET /Inspections/Details/4 responded 200 in 11.8123 ms
+2026-03-28 13:27:05.856 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/Inspections/Details/4 - 200 null text/html; charset=utf-8 16.3531ms
+2026-03-28 13:27:05.899 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_vs/browserLink - null null
+2026-03-28 13:27:05.899 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-28 13:27:05.904 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_framework/aspnetcore-browser-refresh.js - 200 14927 application/javascript; charset=utf-8 4.5351ms
+2026-03-28 13:27:05.905 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7186/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.0251ms
