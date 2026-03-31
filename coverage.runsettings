@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat code coverage">
+        <Configuration>
+          <Exclude>
+            <!-- Razor generated files -->
+            <ModulePath>.*AspNetCoreGeneratedDocument.*</ModulePath>
+            
+            <!-- Entity Framework Core Migrations -->
+            <ModulePath>.*\.Migrations\..*</ModulePath>
+            
+            <!-- Program bootstrapping -->
+            <ModulePath>.*\.Program.*</ModulePath>
+            
+            <!-- Infrastructure / boilerplate -->
+            <ModulePath>.*\.DataSeeder.*</ModulePath>
+            <ModulePath>.*\.ErrorViewModel.*</ModulePath>
+            <ModulePath>.*GlobalExceptionHandlerMiddleware.*</ModulePath>
+            
+            <!-- Identity scaffolding and areas -->
+            <ModulePath>.*\.Areas\..*</ModulePath>
+          </Exclude>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>
