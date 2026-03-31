@@ -1,5 +1,6 @@
 using Library.MVC.Data;
 using Library.MVC.Middleware;
+using Library.MVC.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -43,6 +44,10 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 
 builder.Services.AddAuthorization();
 builder.Services.AddControllersWithViews();
+
+// Register services
+builder.Services.AddScoped<FollowUpService>();
+builder.Services.AddScoped<InspectionService>();
 
 var app = builder.Build();
 
