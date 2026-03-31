@@ -56,11 +56,14 @@ jobs:
       - name: Install ReportGenerator
         run: dotnet tool install -g dotnet-reportgenerator-globaltool
 
+      - name: Find coverage files
+        run: find . -name "coverage.cobertura.xml" -type f
+
       - name: Generate HTML coverage report
         run: |
           export PATH="$PATH:~/.dotnet/tools"
           reportgenerator \
-            -reports:**/coverage.cobertura.xml \
+            -reports:"**/coverage.cobertura.xml" \
             -targetdir:coveragereport \
             -reporttypes:Html
 
